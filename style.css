@@ -1060,6 +1060,74 @@ footer {
     }
 }
 
+/* Envato Partner Badge */
+.partner-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.8rem 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    margin-bottom: 2rem;
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.glow-border {
+    animation: borderPulse 3s infinite;
+}
+
+@keyframes borderPulse {
+    0% {
+        border-color: rgba(255, 255, 255, 0.1);
+        box-shadow: 0 0 0 rgba(76, 175, 80, 0);
+    }
+
+    50% {
+        border-color: #81b441;
+        box-shadow: 0 0 20px rgba(129, 180, 65, 0.4);
+    }
+
+    100% {
+        border-color: rgba(255, 255, 255, 0.1);
+        box-shadow: 0 0 0 rgba(76, 175, 80, 0);
+    }
+}
+
+.partner-text {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.partner-logo-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.partner-logo {
+    height: 24px;
+    width: auto;
+}
+
+.partner-brand {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #fff;
+    letter-spacing: -0.5px;
+}
+
+.highlight-green {
+    color: #81b441;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .hero-container {
@@ -1096,6 +1164,7 @@ footer {
     .navbar .nav-menu.active {
         right: 0;
     }
+
 
     .mobile-toggle {
         display: flex;
