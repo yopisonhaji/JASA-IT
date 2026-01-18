@@ -66,9 +66,10 @@
             <div class="hero-content" data-aos="fade-up">
                 <div class="badge-pill">🚀 Layanan 24 Jam Jabodetabek</div>
                 <h1 class="hero-title">Satu Jalan, <span class="gradient-text">Semua Solusi</span></h1>
-                <p class="hero-subtitle">Instal ulang Windows dengan biaya Seiklasnya.
-                    Didukung solusi teknis menyeluruh dari hardware hingga software, tanpa ribet—kami datang ke lokasi
-                    Anda.</p>
+                <p class="hero-subtitle">
+                    <span id="subtitle-text">Instal ulang Windows dengan biaya Seiklasnya. Didukung solusi teknis
+                        menyeluruh dari hardware hingga software, tanpa ribet—kami datang ke lokasi Anda.</span>
+                </p>
 
                 <div class="hero-buttons">
                     <a href="https://wa.me/6282138004443?text=Halo%20SatuJalan,%20saya%20butuh%20bantuan%20hardware"
@@ -78,6 +79,9 @@
                     <a href="https://wa.me/6282138004443?text=Halo%20SatuJalan,%20saya%20tertarik%20pembuatan%20software/web"
                         class="btn btn-secondary">
                         <i class="fas fa-code"></i> Buat Software
+                    </a>
+                    <a href="#" class="btn btn-accent" id="btn-download">
+                        <i class="fas fa-download"></i> Jasa Download
                     </a>
                 </div>
 
@@ -290,15 +294,29 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="city">Lokasi (Kota)</label>
+                    <label for="city">Lokasi (Kota) / GPS</label>
                     <select id="city" required>
                         <option value="">Pilih Kota...</option>
                         <option value="Jakarta">Jakarta (Base Rate)</option>
-                        <option value="Depok">Depok (+Rp 15rb Transport)</option>
-                        <option value="Bogor">Bogor (+Rp 25rb Transport)</option>
-                        <option value="Tangerang">Tangerang (+Rp 20rb Transport)</option>
-                        <option value="Bekasi">Bekasi (+Rp 20rb Transport)</option>
+                        <option value="Depok">Depok (+Rp 25rb Transport)</option>
+                        <option value="Bogor">Bogor (+Rp 35rb Transport)</option>
+                        <option value="Tangerang">Tangerang (+Rp 25rb Transport)</option>
+                        <option value="Bekasi">Bekasi (+Rp 30rb Transport)</option>
+                        <option value="GPS">📍 Gunakan GPS (Akurat)</option>
+                        <option value="Lainnya">Lainnya (Luar Jabodetabek)</option>
                     </select>
+                </div>
+
+                <div class="form-group" id="gps-group" style="display: none;">
+                    <button type="button" id="btn-location" class="btn btn-secondary full-width"
+                        style="margin-bottom: 10px; border-color: var(--primary); color: var(--primary);">
+                        <i class="fas fa-map-marker-alt"></i> Ambil Lokasi Saya
+                    </button>
+                    <p id="location-status" style="font-size: 0.8rem; color: var(--text-muted); text-align: center;">
+                        Lokasi belum diambil.</p>
+                    <input type="hidden" id="user-lat">
+                    <input type="hidden" id="user-long">
+                    <input type="hidden" id="calc-distance">
                 </div>
 
                 <div class="form-group">
@@ -345,6 +363,43 @@
                 </div>
 
                 <button type="submit" class="btn btn-primary full-width">
+                    <i class="fab fa-whatsapp"></i> Pesan via WhatsApp
+                </button>
+            </form>
+        </div>
+    </div>
+    </div>
+
+    <!-- Download Envato Modal -->
+    <div id="downloadModal" class="modal">
+        <div class="modal-content glass-card">
+            <span class="close-modal close-download">&times;</span>
+            <div class="modal-header">
+                <h2>Jasa Download File Envato</h2>
+                <p>Dapatkan aset premium Envato dengan harga terjangkau (Mulai 10rb).</p>
+            </div>
+
+            <form id="downloadForm">
+                <div class="form-group">
+                    <label for="envatoLink">Link File Envato</label>
+                    <input type="url" id="envatoLink" placeholder="https://elements.envato.com/..." required>
+                </div>
+
+                <div class="form-group">
+                    <label>Metode Pembayaran</label>
+                    <div class="radio-group" style="display: flex; gap: 1rem; color: #fff;">
+                        <label><input type="radio" name="dlPayment" value="Transfer" checked> Transfer</label>
+                        <label><input type="radio" name="dlPayment" value="E-Wallet"> E-Wallet</label>
+                        <label><input type="radio" name="dlPayment" value="QRIS"> QRIS</label>
+                    </div>
+                </div>
+
+                <div class="estimation-box">
+                    <h4>Harga: Mulai Rp 10.000 / File</h4>
+                    <p class="note" style="margin-top: 5px;">*Harga tergantung kurs & paket.</p>
+                </div>
+
+                <button type="submit" class="btn btn-accent full-width">
                     <i class="fab fa-whatsapp"></i> Pesan via WhatsApp
                 </button>
             </form>

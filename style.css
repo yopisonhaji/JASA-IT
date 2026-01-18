@@ -28,6 +28,10 @@
     --radius-sm: 8px;
     --radius-md: 16px;
     --radius-lg: 24px;
+
+    /* New Accent */
+    --accent-orange: #f59e0b;
+    --grad-accent: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
 }
 
 /* Reset & Base */
@@ -300,6 +304,21 @@ img {
     max-width: 90%;
 }
 
+#subtitle-text {
+    display: inline-block;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.text-slide-out {
+    transform: translateY(-20px);
+    opacity: 0;
+}
+
+.text-slide-in {
+    transform: translateY(20px);
+    opacity: 0;
+}
+
 .hero-buttons {
     display: flex;
     gap: 1rem;
@@ -343,6 +362,18 @@ img {
 .btn-secondary:hover {
     background: rgba(255, 255, 255, 0.1);
     border-color: var(--primary);
+}
+
+.btn-accent {
+    background: var(--grad-accent);
+    color: white;
+    border: none;
+    box-shadow: 0 0 20px rgba(245, 158, 11, 0.4);
+}
+
+.btn-accent:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 30px rgba(245, 158, 11, 0.6);
 }
 
 .hero-stats {
@@ -898,6 +929,14 @@ footer {
     padding: 2rem;
     position: relative;
     border-radius: var(--radius-md);
+
+    /* Mobile Fix: Scrollable Content */
+    max-height: 90vh;
+    /* Ensure it never exceeds viewport height */
+    overflow-y: auto;
+    /* Enable vertical scrolling within the modal */
+    scrollbar-width: thin;
+    /* Firefox thin scrollbar */
 }
 
 .close-modal {
