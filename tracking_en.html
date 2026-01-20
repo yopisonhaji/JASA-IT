@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -127,14 +127,14 @@
 
     <nav class="navbar scrolled">
         <div class="container nav-container">
-            <a href="index.html" class="logo">
+            <a href="index_en.html" class="logo">
                 <img src="logo.jpg" alt="SatuJalan Logo" class="logo-img">
                 <span class="logo-text">SATU<span class="highlight">JALAN</span></span>
             </a>
             <ul class="nav-menu">
-                <li class="nav-item"><a href="index.html" class="nav-link">Kembali ke Home</a></li>
+                <li class="nav-item"><a href="index_en.html" class="nav-link">Back to Home</a></li>
                 <li class="nav-item">
-                    <a href="tracking_en.html" class="lang-btn" style="text-decoration: none;">🇺🇸 EN</a>
+                    <a href="tracking.html" class="lang-btn" style="text-decoration: none;">🇮🇩 ID</a>
                 </li>
             </ul>
         </div>
@@ -143,8 +143,8 @@
     <div class="container" style="padding-top: 120px;">
         <div class="section-header center">
             <span class="section-tag" style="color: #00f2ff;">LIVE TRACKING</span>
-            <h2 class="section-title">Status Pesanan: <span class="highlight">#HW-8821</span></h2>
-            <p class="section-desc">Pantau lokasi teknisi secara real-time.</p>
+            <h2 class="section-title">Order Status: <span class="highlight">#HW-8821</span></h2>
+            <p class="section-desc">Monitor technician location in real-time.</p>
         </div>
 
         <div class="map-container glass-card" style="padding: 0; overflow: hidden;">
@@ -165,35 +165,35 @@
             <div class="status-step active">
                 <div class="status-dot"></div>
                 <div>
-                    <h4>Pesanan Dikonfirmasi</h4>
-                    <p style="font-size: 0.8rem;">14:00 - Admin telah menerima request Anda.</p>
+                    <h4>Order Confirmed</h4>
+                    <p style="font-size: 0.8rem;">14:00 - Admin has received your request.</p>
                 </div>
             </div>
             <div class="status-step active">
                 <div class="status-dot"></div>
                 <div>
-                    <h4>Teknisi Menuju Lokasi</h4>
-                    <p style="font-size: 0.8rem;">14:15 - Rudi (4.9⭐) sedang dalam perjalanan.</p>
+                    <h4>Technician On The Way</h4>
+                    <p style="font-size: 0.8rem;">14:15 - Rudi (4.9⭐) is on the way.</p>
                 </div>
             </div>
             <div class="status-step">
                 <div class="status-dot"></div>
                 <div>
-                    <h4>Pengerjaan Service</h4>
-                    <p style="font-size: 0.8rem;">Menunggu teknisi tiba...</p>
+                    <h4>Service In Progress</h4>
+                    <p style="font-size: 0.8rem;">Waiting for technician arrival...</p>
                 </div>
             </div>
             <div class="status-step">
                 <div class="status-dot"></div>
                 <div>
-                    <h4>Selesai & Pembayaran</h4>
+                    <h4>Done & Payment</h4>
                 </div>
             </div>
         </div>
 
         <div class="center">
             <a href="https://wa.me/6282138004443" class="btn btn-primary glow-effect">
-                <i class="fab fa-whatsapp"></i> Chat Teknisi
+                <i class="fab fa-whatsapp"></i> Chat Technician
             </a>
         </div>
     </div>
@@ -239,11 +239,11 @@
 
         // Simulate Notifications
         setTimeout(() => {
-            showToast('Teknisi Rudi bergerak ke lokasi Anda');
+            showToast('Technician Rudi is moving to your location');
         }, 2000);
 
         setTimeout(() => {
-            showToast('Estimasi kedatangan: 15 menit');
+            showToast('Est. arrival: 15 minutes');
         }, 6000);
     </script>
 </body>

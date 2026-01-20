@@ -178,7 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (btnLocation) {
         btnLocation.addEventListener('click', () => {
             if ("geolocation" in navigator) {
-                locStatus.textContent = "Sedang mengambil lokasi...";
+                locStatus.textContent = "Getting Location...";
                 navigator.geolocation.getCurrentPosition(
                     (position) => {
                         const lat = position.coords.latitude;
@@ -190,17 +190,17 @@ document.addEventListener('DOMContentLoaded', () => {
                         const dist = getDistance(BASE_COORDS.lat, BASE_COORDS.lng, lat, long);
                         calcDistInput.value = dist.toFixed(2);
 
-                        locStatus.innerHTML = `<span style="color: #00f2ff;">Lokasi Ditemukan! Jarak dari Base (BSD): <b>${dist.toFixed(1)} KM</b></span>`;
+                        locStatus.innerHTML = `<span style="color: #00f2ff;">Location Found! Distance from Base (BSD): <b>${dist.toFixed(1)} KM</b></span>`;
 
                         updateCost();
                     },
                     (error) => {
                         console.error("Error GPS:", error);
-                        locStatus.textContent = "Gagal mengambil lokasi. Pastikan GPS aktif.";
+                        locStatus.textContent = "Failed to get location. Ensure GPS is on.";
                     }
                 );
             } else {
-                locStatus.textContent = "Browser tidak mendukung Geolocation.";
+                locStatus.textContent = "Browser does not support Geolocation.";
             }
         });
     }
@@ -223,7 +223,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (city === 'Lainnya') {
             transportDisplay.textContent = '-';
             totalDisplay.textContent = '-';
-            techInfoDiv.innerHTML = `<span style="color: #ff4757;"><i class="fas fa-times-circle"></i> Maaf, kami belum melayani area ini.</span>`;
+            techInfoDiv.innerHTML = `<span style="color: #ff4757;"><i class="fas fa-times-circle"></i> Sorry, we do not serve this area yet.</span>`;
             techInfoDiv.style.display = 'block';
             return;
         }
@@ -244,28 +244,28 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         let baseService = 150000;
-        let serviceText = "Rp 150.000";
+        let serviceText = "Rp 150,000";
 
         // Logic: Seikhlasnya for "Install Ulang"
         if (service.includes('Install Ulang')) {
             baseService = 0; // Seikhlasnya logic
-            serviceText = "Seikhlasnya";
+            serviceText = "Pay As You Wish";
 
             const serviceCostSpan = document.querySelector('.estimation-box .est-row:first-child span:last-child');
             if (serviceCostSpan) serviceCostSpan.textContent = serviceText;
         } else {
             const serviceCostSpan = document.querySelector('.estimation-box .est-row:first-child span:last-child');
-            if (serviceCostSpan) serviceCostSpan.textContent = "Rp 150.000";
+            if (serviceCostSpan) serviceCostSpan.textContent = "Rp 150,000";
         }
 
         if (city === 'GPS' && transport === 0) {
-            transportDisplay.textContent = "Menunggu GPS...";
+            transportDisplay.textContent = "Waiting for GPS...";
         } else {
             transportDisplay.textContent = `Rp ${transport.toLocaleString('id-ID')}`;
         }
 
         if (baseService === 0) {
-            totalDisplay.textContent = `Rp ${transport.toLocaleString('id-ID')} + Jasa Seikhlasnya`;
+            totalDisplay.textContent = `Rp ${transport.toLocaleString('id-ID')} + Service Fee (Pay as you wish)`;
         } else {
             totalDisplay.textContent = `Rp ${(baseService + transport).toLocaleString('id-ID')}`;
         }
@@ -273,10 +273,10 @@ document.addEventListener('DOMContentLoaded', () => {
         // Update Tech Info for Manual Cities
         if (city !== 'GPS' && techMap[city]) {
             const tech = techMap[city];
-            techInfoDiv.innerHTML = `<span style="color: #00f2ff;"><i class="fas fa-user-astronaut"></i> Teknisi Terdekat: <b>${tech.name}</b> (${tech.dist}) ⭐${tech.rating}</span>`;
+            techInfoDiv.innerHTML = `<span style="color: #00f2ff;"><i class="fas fa-user-astronaut"></i> Nearest Tech: <b>${tech.name}</b> (${tech.dist}) ⭐${tech.rating}</span>`;
             techInfoDiv.style.display = 'block';
         } else if (city === 'GPS' && parseFloat(calcDistInput.value) > 0) {
-            techInfoDiv.innerHTML = `<span style="color: #00f2ff;"><i class="fas fa-satellite"></i> Akurasi GPS Tinggi. Biaya Transport Real-time.</span>`;
+            techInfoDiv.innerHTML = `<span style="color: #00f2ff;"><i class="fas fa-satellite"></i> High GPS Accuracy. Real-time Transport Fee.</span>`;
             techInfoDiv.style.display = 'block';
         } else {
             techInfoDiv.style.display = 'none';
@@ -312,7 +312,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (lat && long) {
                 // Append Map Link to Address
-                address += `\n📍 *Peta Lokasi:* https://www.google.com/maps?q=${lat},${long}`;
+                address += `\n📍 *Map Location:* https://www.google.com/maps?q=${lat},${long}`;
             }
 
             if (!isNaN(dist)) {
@@ -332,24 +332,24 @@ document.addEventListener('DOMContentLoaded', () => {
         // In production, this would be a real domain. For now, we assume relative path works if they open it on same device,
         // or we just mock it properly.
         const trackingId = `HW-${Math.floor(Math.random() * 1000)}`;
-        const trackingLink = `${window.location.origin}/tracking.html?id=${trackingId}`;
+        const trackingLink = `${window.location.origin}/tracking_en.html?id=${trackingId}`; // Direct link to English page
 
         const waNumber = '6282138004443';
-        const message = `Halo SatuJalan, saya ingin booking service:
+        const message = `Hello SatuJalan, I would like to book a service:
         
-📋 *FORM BOOKING HARDWARE*
+📋 *HARDWARE BOOKING FORM*
 --------------------------------
-🔧 *Layanan:* ${serviceType}
-💻 *Device/Masalah:* ${deviceType}
-🏙️ *Kota/Mode:* ${city}
-📍 *Alamat:* ${address}
-⏰ *Waktu:* ${time}
-💳 *Pembayaran:* ${payment}
+🔧 *Service:* ${serviceType}
+💻 *Device/Issue:* ${deviceType}
+🏙️ *City/Mode:* ${city}
+📍 *Address:* ${address}
+⏰ *Time:* ${time}
+💳 *Payment:* ${payment}
 --------------------------------
-💰 *Estimasi Total:* Rp ${total.toLocaleString('id-ID')}
+💰 *Est. Total:* Rp ${total.toLocaleString('id-ID')}
 🔗 *Ref Tracking:* ${trackingLink}
 
-Mohon konfirmasi jadwal & teknisi.`;
+Please confirm schedule & technician.`;
 
         window.open(`https://wa.me/${waNumber}?text=${encodeURIComponent(message)}`, '_blank');
         modal.classList.remove('show');
@@ -368,17 +368,17 @@ Mohon konfirmasi jadwal & teknisi.`;
             const onsite = document.querySelector('input[name="onsite"]:checked').value;
 
             const waNumber = '6282138004443';
-            const message = `Halo SatuJalan, saya tertarik project software:
+            const message = `Hello SatuJalan, I am interested in a software project:
             
-💻 *REQUEST PROJECT*
+💻 *PROJECT REQUEST*
 --------------------------------
-🌐 *Tipe:* ${type}
-📝 *Deskripsi:* ${desc}
+🌐 *Type:* ${type}
+📝 *Description:* ${desc}
 💰 *Budget:* ${budget}
 ⏱️ *Timeline:* ${timeline}
 🤝 *Meeting:* ${onsite}
 
-Mohon info proposal & penawaran.`;
+Please provide proposal & offer.`;
 
             window.open(`https://wa.me/${waNumber}?text=${encodeURIComponent(message)}`, '_blank');
             softwareModal.classList.remove('show');
@@ -389,9 +389,9 @@ Mohon info proposal & penawaran.`;
     // 1. Sliding Text Animation
     const subtitleText = document.getElementById('subtitle-text');
     const messages = [
-        "Instal ulang Windows dengan biaya <span class='highlight'>Seiklasnya</span>. Didukung solusi teknis menyeluruh dari hardware hingga software, tanpa ribet—kami datang ke lokasi Anda.",
-        "Harga <span class='highlight'>mulai 10k untuk download di Envato</span>. Dapatkan aset premium dengan harga terjangkau!",
-        "Pembuatan <span class='highlight'>web mulai dari 700 ribu</span>, Anda sudah memiliki web pribadi untuk menunjang value Anda."
+        "Reinstall Windows with <span class='highlight'>Pay As You Wish</span>. Supported by comprehensive technical solutions from hardware to software, hassle-free—we come to you.",
+        "Prices <span class='highlight'>start from 10k for Envato downloads</span>. Get premium assets at affordable prices!",
+        "Web creation <span class='highlight'>starting from 700k</span>, get your personal website to boost your value."
     ];
     let msgIndex = 0;
 
@@ -450,15 +450,15 @@ Mohon info proposal & penawaran.`;
             const payment = document.querySelector('input[name="dlPayment"]:checked').value;
 
             const waNumber = '6282138004443';
-            const message = `Halo SatuJalan, saya mau Request Download File Envato:
+            const message = `Hello SatuJalan, I want to Request Envato File Download:
             
 📥 *REQUEST DOWNLOAD ENVATO*
 --------------------------------
 🔗 *Link:* ${link}
-💳 *Metode Bayar:* ${payment}
-💰 *Harga:* Mulai Rp 10.000 / File
+💳 *Method:* ${payment}
+💰 *Price:* Starts from Rp 10.000 / File
 
-Mohon diproses, terima kasih.`;
+Please process, thank you.`;
 
             window.open(`https://wa.me/${waNumber}?text=${encodeURIComponent(message)}`, '_blank');
             downloadModal.classList.remove('show');
@@ -514,69 +514,6 @@ Mohon diproses, terima kasih.`;
     ];
     initMarquee('code-marquee', codeLogos, 'logo code');
 
-    // --- LANGUAGE SWITCHER ---
-    const langToggle = document.getElementById('lang-toggle');
-    let currentLang = 'id'; // Default
-
-    const translations = {
-        // Navbar
-        'nav-home': { id: 'Beranda', en: 'Home' },
-        'nav-hardware': { id: 'Hardware', en: 'Hardware' },
-        'nav-software': { id: 'Software', en: 'Software' },
-        'nav-coverage': { id: 'Area Layanan', en: 'Coverage' },
-        'nav-contact': { id: 'Hubungi Kami', en: 'Contact Us' },
-
-        // Hero
-        'hero-badge': { id: '🚀 Layanan 24 Jam Jabodetabek', en: '🚀 24/7 Service Jabodetabek' },
-        'hero-title': { id: 'Satu Jalan, <span class="gradient-text">Semua Solusi</span>', en: 'One Way, <span class="gradient-text">All Solutions</span>' },
-        'btn-hardware': { id: 'Servis Hardware', en: 'Hardware Repair' },
-        'btn-software': { id: 'Buat Software', en: 'Create Software' },
-        'btn-download': { id: 'Jasa Download', en: 'Download Service' },
-        'stat-ready': { id: 'Siap Panggil', en: 'Ready to Call' },
-        'stat-eta': { id: 'Estimasi Tiba', en: 'ETA Arrival' },
-        'stat-rating': { id: 'Rating Teknisi', en: 'Tech Rating' },
-
-        // Sections
-        'hw-title': { id: 'Solusi <span class="highlight-blue">Hardware</span>', en: '<span class="highlight-blue">Hardware</span> Solutions' },
-        'hw-desc': { id: 'Teknisi profesional kami datang langsung ke rumah atau kantor Anda.', en: 'Our professional technicians come directly to your home or office.' },
-
-        'sw-title': { id: 'Solusi <span class="highlight-purple">Software</span>', en: '<span class="highlight-purple">Software</span> Solutions' },
-        'sw-desc': { id: 'Transformasi ide bisnis Anda menjadi produk digital modern.', en: 'Transform your business ideas into modern digital products.' },
-
-        'testimoni-tag': { id: 'APA KATA MEREKA?', en: 'WHAT THEY SAY?' },
-        'testimoni-title': { id: 'Testimoni <span class="highlight">Pelanggan</span>', en: 'Customer <span class="highlight">Testimonials</span>' },
-        'testimoni-desc': { id: 'Pengalaman nyata dari klien yang telah menggunakan jasa SatuJalan.', en: 'Real experiences from clients who have used SatuJalan services.' },
-
-        'cov-title': { id: 'Area Layanan Kami', en: 'Our Service Area' },
-        'cov-desc': { id: 'Kami melayani panggilan ke seluruh wilayah <strong>JABODETABEK</strong> dengan perhitungan biaya transport yang transparan.', en: 'We serve calls throughout <strong>JABODETABEK</strong> with transparent transport cost calculation.' },
-
-        'cta-title': { id: 'Butuh Bantuan Sekarang?', en: 'Need Help Now?' },
-        'cta-desc': { id: 'Teknisi kami siap meluncur ke lokasi Anda.', en: 'Our technicians are ready to dispatch to your location.' },
-        'cta-btn': { id: 'Chat WhatsApp Sekarang', en: 'Chat WhatsApp Now' }
-    };
-
-    if (langToggle) {
-        langToggle.addEventListener('click', () => {
-            // Toggle State
-            currentLang = currentLang === 'id' ? 'en' : 'id';
-
-            // Update Button
-            langToggle.textContent = currentLang === 'id' ? '🇺🇸 EN' : '🇮🇩 ID';
-
-            // Update Text
-            const elements = document.querySelectorAll('[data-lang]');
-            elements.forEach(el => {
-                const key = el.getAttribute('data-lang');
-                if (translations[key]) {
-                    // Check if content has HTML
-                    if (translations[key][currentLang].includes('<')) {
-                        el.innerHTML = translations[key][currentLang];
-                    } else {
-                        el.textContent = translations[key][currentLang];
-                    }
-                }
-            });
-        });
-    }
+    // --- NO LANGUAGE SWITCHER (Separate File Strategy) ---
 
 });
