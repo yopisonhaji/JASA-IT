@@ -387,7 +387,8 @@ Mohon info proposal & penawaran.`;
     const subtitleText = document.getElementById('subtitle-text');
     const messages = [
         "Instal ulang Windows dengan biaya Seiklasnya. Didukung solusi teknis menyeluruh dari hardware hingga software, tanpa ribet—kami datang ke lokasi Anda.",
-        "Harga mulai 10k untuk download di Envato. Dapatkan aset premium dengan harga terjangkau!"
+        "Harga mulai 10k untuk download di Envato. Dapatkan aset premium dengan harga terjangkau!",
+        "Pembuatan web mulai dari 700 ribu, Anda sudah memiliki web pribadi untuk menunjang value Anda."
     ];
     let msgIndex = 0;
 
@@ -460,5 +461,54 @@ Mohon diproses, terima kasih.`;
             downloadModal.classList.remove('show');
         });
     }
+
+    // --- DYNAMIC LOGO MARQUEE (SEPARATED) ---
+
+    const initMarquee = (containerId, logoList, folderName) => {
+        const container = document.getElementById(containerId);
+        if (!container) return;
+
+        // Create objects
+        const logos = logoList.map(filename => ({
+            src: `${folderName}/${filename}`,
+            alt: filename.replace('.png', '')
+        }));
+
+        // Helper to create img
+        const createLogo = (logo) => {
+            const img = document.createElement('img');
+            img.src = logo.src;
+            img.alt = logo.alt;
+            img.className = 'logo-item';
+            return img;
+        };
+
+        // Populate (Need enough duplicates for smooth infinite scroll)
+        // For visual density, we want at least 20-30 items
+        const minItems = 20;
+        const iterations = Math.ceil(minItems / logos.length);
+
+        for (let i = 0; i < iterations; i++) {
+            logos.forEach(logo => {
+                container.appendChild(createLogo(logo));
+            });
+        }
+    };
+
+    // 1. Brand Logos (Hardware) -> Scroll Left
+    const brandLogos = [
+        'logo acer.png', 'logo asus.png', 'logo dell.png',
+        'logo hp.png', 'logo iphone.png', 'logo lenovo.png',
+        'logo predator.png'
+    ];
+    initMarquee('brand-marquee', brandLogos, 'logo brend');
+
+    // 2. Code Logos (Software) -> Scroll Right
+    const codeLogos = [
+        'logo html.png', 'logo js.png', 'logo microsoft .net.png',
+        'logo php.png', 'logo python.png', 'logo react js.png',
+        'logo vs code.png'
+    ];
+    initMarquee('code-marquee', codeLogos, 'logo code');
 
 });
