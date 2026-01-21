@@ -524,6 +524,7 @@ Mohon diproses, terima kasih.`;
         'nav-hardware': { id: 'Hardware', en: 'Hardware' },
         'nav-software': { id: 'Software', en: 'Software' },
         'nav-coverage': { id: 'Area Layanan', en: 'Coverage' },
+        'nav-portfolio': { id: 'Portofolio', en: 'Portfolio' },
         'nav-contact': { id: 'Hubungi Kami', en: 'Contact Us' },
 
         // Hero
@@ -552,7 +553,12 @@ Mohon diproses, terima kasih.`;
 
         'cta-title': { id: 'Butuh Bantuan Sekarang?', en: 'Need Help Now?' },
         'cta-desc': { id: 'Teknisi kami siap meluncur ke lokasi Anda.', en: 'Our technicians are ready to dispatch to your location.' },
-        'cta-btn': { id: 'Chat WhatsApp Sekarang', en: 'Chat WhatsApp Now' }
+        'cta-btn': { id: 'Chat WhatsApp Sekarang', en: 'Chat WhatsApp Now' },
+
+        // Portfolio
+        'port-tag': { id: 'PORTFOLIO', en: 'PORTFOLIO' },
+        'port-title': { id: 'Portofolio <span class="highlight-blue">Unggulan</span>', en: 'Featured <span class="highlight-blue">Portfolio</span>' },
+        'port-desc': { id: 'Bukti nyata dedikasi kami dalam menghadirkan solusi digital berkualitas tinggi.', en: 'Real proof of our dedication in delivering high-quality digital solutions.' }
     };
 
     if (langToggle) {
@@ -576,6 +582,74 @@ Mohon diproses, terima kasih.`;
                     }
                 }
             });
+        });
+    }
+
+
+    // --- TESTIMONIAL MARQUEE LOGIC ---
+    const testimonialTrack = document.getElementById('testimonial-track');
+    if (testimonialTrack) {
+        const items = testimonialTrack.innerHTML;
+        testimonialTrack.innerHTML = items + items; // Duplicate for infinite scroll
+    }
+
+    // --- PORTFOLIO LOGIC ---
+
+    // 1. Filtering
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Remove active class from all
+            filterBtns.forEach(b => b.classList.remove('active'));
+            // Add active to click
+            btn.classList.add('active');
+
+            const filterValue = btn.getAttribute('data-filter');
+
+            portfolioItems.forEach(item => {
+                if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                    item.classList.remove('hide');
+                    item.classList.add('show');
+                } else {
+                    item.classList.remove('show');
+                    item.classList.add('hide');
+                }
+            });
+        });
+    });
+
+    // 2. Lightbox
+    const portfolioModal = document.getElementById('portfolioModal');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const captionText = document.getElementById('caption');
+    const closeLightbox = document.querySelector('.close-lightbox');
+
+    portfolioItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const img = item.querySelector('img');
+            const h4 = item.querySelector('h4');
+            const p = item.querySelector('p');
+
+            portfolioModal.style.display = "block";
+            lightboxImg.src = img.src;
+            captionText.innerHTML = `<strong>${h4.innerText}</strong><br>${p.innerText}`;
+        });
+    });
+
+    if (closeLightbox) {
+        closeLightbox.addEventListener('click', () => {
+            portfolioModal.style.display = "none";
+        });
+    }
+
+    // Close lightbox when clicking outside image
+    if (portfolioModal) {
+        portfolioModal.addEventListener('click', (e) => {
+            if (e.target === portfolioModal) {
+                portfolioModal.style.display = "none";
+            }
         });
     }
 

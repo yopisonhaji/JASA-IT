@@ -516,4 +516,72 @@ Please process, thank you.`;
 
     // --- NO LANGUAGE SWITCHER (Separate File Strategy) ---
 
+
+    // --- TESTIMONIAL MARQUEE LOGIC ---
+    const testimonialTrack = document.getElementById('testimonial-track');
+    if (testimonialTrack) {
+        const items = testimonialTrack.innerHTML;
+        testimonialTrack.innerHTML = items + items; // Duplicate for infinite scroll
+    }
+
+    // --- PORTFOLIO LOGIC ---
+
+    // 1. Filtering
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Remove active class from all
+            filterBtns.forEach(b => b.classList.remove('active'));
+            // Add active to click
+            btn.classList.add('active');
+
+            const filterValue = btn.getAttribute('data-filter');
+
+            portfolioItems.forEach(item => {
+                if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                    item.classList.remove('hide');
+                    item.classList.add('show');
+                } else {
+                    item.classList.remove('show');
+                    item.classList.add('hide');
+                }
+            });
+        });
+    });
+
+    // 2. Lightbox
+    const portfolioModal = document.getElementById('portfolioModal');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const captionText = document.getElementById('caption');
+    const closeLightbox = document.querySelector('.close-lightbox');
+
+    portfolioItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const img = item.querySelector('img');
+            const h4 = item.querySelector('h4');
+            const p = item.querySelector('p');
+
+            portfolioModal.style.display = "block";
+            lightboxImg.src = img.src;
+            captionText.innerHTML = `<strong>${h4.innerText}</strong><br>${p.innerText}`;
+        });
+    });
+
+    if (closeLightbox) {
+        closeLightbox.addEventListener('click', () => {
+            portfolioModal.style.display = "none";
+        });
+    }
+
+    // Close lightbox when clicking outside image
+    if (portfolioModal) {
+        portfolioModal.addEventListener('click', (e) => {
+            if (e.target === portfolioModal) {
+                portfolioModal.style.display = "none";
+            }
+        });
+    }
+
 });
