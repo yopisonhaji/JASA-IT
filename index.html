@@ -58,8 +58,9 @@
                 <li class="nav-item"><a href="#portfolio" class="nav-link" data-lang="nav-portfolio">Portofolio</a></li>
                 <li class="nav-item"><a href="#web-pricing" class="nav-link" data-lang="nav-pricing">Jasa Website</a>
                 </li>
-                <li class="nav-item"><a href="https://wa.me/6282138004443" class="nav-btn-mobile"
-                        data-lang="nav-contact">Hubungi Kami</a></li>
+                <li class="nav-item"><a
+                        href="https://wa.me/6282138004443?text=Assallamualaikum%20Admin%0ANama%20%3A%0ASaya%20ingin%20..."
+                        class="nav-btn-mobile" data-lang="nav-contact">Hubungi Kami</a></li>
                 <li class="nav-item">
                     <a href="index_en.html" class="lang-btn" style="text-decoration: none;">🇺🇸 EN</a>
                 </li>
@@ -603,9 +604,51 @@
         <div class="container cta-container center">
             <h2 data-lang="cta-title">Butuh Bantuan Sekarang?</h2>
             <p data-lang="cta-desc">Teknisi kami siap meluncur ke lokasi Anda.</p>
-            <a href="https://wa.me/6282138004443" class="btn btn-primary btn-lg pulse-anim">
+            <a href="https://wa.me/6282138004443?text=Assallamualaikum%20Admin%0ANama%20%3A%0ASaya%20ingin%20..."
+                class="btn btn-primary btn-lg pulse-anim">
                 <i class="fab fa-whatsapp"></i> <span data-lang="cta-btn">Chat WhatsApp Sekarang</span>
             </a>
+        </div>
+    </section>
+
+    <!-- Comment Section -->
+    <section id="contact-comment" class="services">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-tag">FEEDBACK</span>
+                <h2 class="section-title">Kirim <span class="highlight">Komentar</span></h2>
+                <p class="section-desc">Kritik, saran, atau pesan apa pun akan terkirim langsung ke email kami.</p>
+            </div>
+
+            <div class="glass-card" style="max-width: 600px; margin: 0 auto; padding: 2rem;">
+                <form action="https://formsubmit.co/yulison47@gmail.com" method="POST">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_subject" value="Komentar Baru dari Website SatuJalan">
+
+                    <div class="form-group">
+                        <label for="commentName">Nama</label>
+                        <input type="text" name="name" id="commentName" placeholder="Nama Anda" required
+                            style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: white;">
+                    </div>
+
+                    <div class="form-group" style="margin-top: 1rem;">
+                        <label for="commentEmail">Email (Opsional)</label>
+                        <input type="email" name="email" id="commentEmail" placeholder="email@contoh.com"
+                            style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: white;">
+                    </div>
+
+                    <div class="form-group" style="margin-top: 1rem;">
+                        <label for="commentMessage">Pesan</label>
+                        <textarea name="message" id="commentMessage" rows="4" placeholder="Tulis pesan Anda di sini..."
+                            required
+                            style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: white;"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary full-width" style="margin-top: 1.5rem;">
+                        <i class="far fa-paper-plane"></i> Kirim Pesan
+                    </button>
+                </form>
+            </div>
         </div>
     </section>
 
@@ -635,7 +678,8 @@
             </div>
         </div>
         <div class="footer-bottom center">
-            <p>&copy; 2026 SatuJalan. All rights reserved.</p>
+            <p>&copy; 2026 SatuJalan. All rights reserved.<br><span style="font-size: 0.9em; opacity: 0.7;">Pembuat
+                    Desain: Yopi</span></p>
         </div>
     </footer>
 
