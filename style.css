@@ -1902,20 +1902,28 @@ footer {
 .testimonial-track {
     display: flex;
     gap: 2rem;
-    width: max-content;
-    animation: scrollQuote 40s linear infinite;
+    width: 60%;
+    /* Allow overflow to be handled by container usually, but here we want scroll */
+    overflow-x: auto;
+    scroll-behavior: auto;
+    /* JS will handle smooth or instant */
+    padding-bottom: 1rem;
+    /* Space for scrollbar if any */
+    cursor: grab;
+    /* Hide Scrollbar */
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE 10+ */
 }
 
-@keyframes scrollQuote {
-    0% {
-        transform: translateX(0);
-    }
+.testimonial-track::-webkit-scrollbar {
+    display: none;
+    /* Chrome/Safari */
+}
 
-    100% {
-        transform: translateX(-50%);
-    }
-
-    /* -50% because we will clone the items once, so total width is 200% of original content */
+.testimonial-track:active {
+    cursor: grabbing;
 }
 
 .review-card {
@@ -2430,3 +2438,187 @@ footer {
 
 /* Map Visual - Refined */
 /* Old big icon rules removed */
+
+/* --- Aesthetic Background Animation (Traveling Neon Rings) --- */
+.aesthetic-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -5;
+    /* Behind everything */
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.neon-ring {
+    position: absolute;
+    border-radius: 50%;
+    background: transparent;
+    opacity: 0.6;
+    box-shadow: 0 0 25px currentColor;
+}
+
+/* Ring 1: Cyan, Top-Left to Bottom-Right */
+.ring-travel-1 {
+    width: 300px;
+    height: 300px;
+    border: 3px solid #00f2ff;
+    /* Cyan */
+    color: #00f2ff;
+    top: -300px;
+    left: -300px;
+    animation: moveDiagonal1 25s linear infinite;
+}
+
+/* Ring 2: Purple, Bottom-Right to Top-Left */
+.ring-travel-2 {
+    width: 400px;
+    height: 400px;
+    border: 4px solid #bc13fe;
+    /* Neon Purple */
+    color: #bc13fe;
+    bottom: -400px;
+    right: -400px;
+    animation: moveDiagonal2 30s linear infinite;
+    animation-delay: -10s;
+}
+
+/* Ring 3: Orange, Top-Right to Bottom-Left */
+.ring-travel-3 {
+    width: 200px;
+    height: 200px;
+    border: 3px solid #ffaa00;
+    /* Bright Orange */
+    color: #ffaa00;
+    top: -200px;
+    right: -200px;
+    animation: moveDiagonal3 28s linear infinite;
+    animation-delay: -5s;
+}
+
+@keyframes moveDiagonal1 {
+    0% {
+        transform: translate(0, 0) scale(0.8);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.8;
+    }
+
+    50% {
+        opacity: 0.4;
+    }
+
+    /* Blink */
+    90% {
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translate(120vw, 120vh) scale(1.2);
+        opacity: 0;
+    }
+}
+
+@keyframes moveDiagonal2 {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.8;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+
+    /* Blink */
+    80% {
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translate(-120vw, -120vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes moveDiagonal3 {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.8;
+    }
+
+    40% {
+        opacity: 0.2;
+    }
+
+    /* Blink */
+    70% {
+        opacity: 0.9;
+    }
+
+    100% {
+        transform: translate(-120vw, 120vh) scale(0.5);
+        opacity: 0;
+    }
+}
+
+/* --- Floating CS Button Dynamic Animation --- */
+.float-chat {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: linear-gradient(135deg, #25d366, #128c7e);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    cursor: pointer;
+    z-index: 9999;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    animation: floatPulse 3s infinite;
+}
+
+.chat-avatar-icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.float-chat:hover {
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
+}
+
+@keyframes floatPulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+        transform: translateY(0);
+    }
+
+    50% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+        transform: translateY(-5px);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+        transform: translateY(0);
+    }
+}

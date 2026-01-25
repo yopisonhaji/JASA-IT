@@ -587,10 +587,75 @@ Mohon diproses, terima kasih.`;
 
 
     // --- TESTIMONIAL MARQUEE LOGIC ---
+    // --- TESTIMONIAL SLIDER LOGIC (Auto-Scroll + Swipe) ---
     const testimonialTrack = document.getElementById('testimonial-track');
     if (testimonialTrack) {
+        // Clone items for infinite scroll effect
         const items = testimonialTrack.innerHTML;
-        testimonialTrack.innerHTML = items + items; // Duplicate for infinite scroll
+        testimonialTrack.innerHTML = items + items;
+
+        let scrollAmount = 0;
+        let scrollSpeed = 1; // Pixels per tick
+        let isPaused = false;
+        let autoScroll;
+
+        const startAutoScroll = () => {
+            autoScroll = setInterval(() => {
+                if (!isPaused) {
+                    testimonialTrack.scrollLeft += scrollSpeed;
+
+                    // Infinite Loop Logic
+                    // If we scrolled past half the width (original content width), reset to 0
+                    if (testimonialTrack.scrollLeft >= (testimonialTrack.scrollWidth / 2)) {
+                        testimonialTrack.scrollLeft = 0;
+                    }
+                }
+            }, 20); // 50fps
+        };
+
+        // Initialize
+        startAutoScroll();
+
+        // Pause on Hover / Touch
+        testimonialTrack.addEventListener('mouseenter', () => isPaused = true);
+        testimonialTrack.addEventListener('mouseleave', () => isPaused = false);
+        testimonialTrack.addEventListener('touchstart', () => isPaused = true);
+        testimonialTrack.addEventListener('touchend', () => {
+            setTimeout(() => isPaused = false, 1000); // Wait a bit before resuming
+        });
+
+        // Optional: Manual Drag (Mouse)
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        testimonialTrack.addEventListener('mousedown', (e) => {
+            isPaused = true;
+            isDown = true;
+            testimonialTrack.classList.add('active'); // Add grabbing cursor class if valid
+            startX = e.pageX - testimonialTrack.offsetLeft;
+            scrollLeft = testimonialTrack.scrollLeft;
+        });
+
+        testimonialTrack.addEventListener('mouseleave', () => {
+            isDown = false;
+            isPaused = false;
+            testimonialTrack.classList.remove('active');
+        });
+
+        testimonialTrack.addEventListener('mouseup', () => {
+            isDown = false;
+            isPaused = false; // Will be handled by mouseleave usually, but good fallback
+            testimonialTrack.classList.remove('active');
+        });
+
+        testimonialTrack.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - testimonialTrack.offsetLeft;
+            const walk = (x - startX) * 2; // Scroll-fast
+            testimonialTrack.scrollLeft = scrollLeft - walk;
+        });
     }
 
     // --- PORTFOLIO LOGIC ---
