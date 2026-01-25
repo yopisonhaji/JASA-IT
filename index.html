@@ -4,8 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SatuJalan - Satu Jalan, Semua Solusi</title>
-    <meta name="description" content="Jasa Panggilan Service Elektronik & Software Development 24 Jam Jabodetabek.">
+    <title>SatuJalan - Solusi Servis Laptop, HP & Web Development</title>
+    <meta name="description"
+        content="Layanan Servis Panggilan 24 Jam untuk Laptop, HP, & IT Support di Jabodetabek. Jasa Pembuatan Website & Aplikasi Profesional. Cepat, Bergaransi, & Transparan.">
+    <meta name="keywords"
+        content="servis laptop panggilan, servis hp, service komputer jabodetabek, jasa pembuatan website, web developer jakarta, data recovery, install ulang windows">
+    <meta name="author" content="SatuJalan IT Solutions">
+
+    <!-- Open Graph / Facebook / WhatsApp Preview -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://satujalan.com/">
+    <meta property="og:title" content="SatuJalan - Solusi IT & Servis Elektronik 24 Jam">
+    <meta property="og:description"
+        content="Butuh servis laptop/HP panggilan? Atau mau bikin website bisnis? SatuJalan solusinya. Teknisi berpengalaman siap datang ke tempat Anda.">
+    <meta property="og:image" content="https://source.unsplash.com/1200x630/?technology,repair">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -150,35 +162,51 @@
             </div>
 
             <div class="services-grid">
+                <!-- 1. Reparasi -->
                 <div class="service-card glass-card">
                     <div class="card-icon"><i class="fas fa-tools"></i></div>
-                    <h3>Reparasi & Servis</h3>
-                    <p>Perbaikan PC, Laptop, Printer yang rusak atau bermasalah.</p>
+                    <h3>Reparasi & Servis Elektronik</h3>
+                    <p>Servis cepat untuk HP, laptop, dan peralatan rumah tangga. Layanan meliputi:</p>
                     <ul class="card-list">
-                        <li><i class="fas fa-check"></i> Mati Total</li>
+                        <li><i class="fas fa-check"></i> HP/Laptop mati total</li>
                         <li><i class="fas fa-check"></i> Ganti LCD/Baterai</li>
-                        <li><i class="fas fa-check"></i> Keyboard Error</li>
+                        <li><i class="fas fa-check"></i> Masalah keyboard dan lainnya</li>
                     </ul>
+                    <a href="https://wa.me/6282138004443?text=Halo%20SatuJalan,%20saya%20butuh%20estimasi%20untuk%20servis"
+                        class="btn-text">Chat sekarang untuk estimasi dan servis! <i class="fas fa-arrow-right"></i></a>
                 </div>
+
+                <!-- 2. Maintenance -->
                 <div class="service-card glass-card">
                     <div class="card-icon"><i class="fas fa-broom"></i></div>
-                    <h3>Maintenance</h3>
-                    <p>Perawatan berkala agar perangkat tetap optimal dan awet.</p>
+                    <h3>Maintenance Elektronik</h3>
+                    <p>Perawatan berkala untuk perangkat Anda. Layanan meliputi:</p>
                     <ul class="card-list">
-                        <li><i class="fas fa-check"></i> Pembersihan Debu</li>
-                        <li><i class="fas fa-check"></i> Ganti Thermal Paste</li>
-                        <li><i class="fas fa-check"></i> Cable Management</li>
+                        <li><i class="fas fa-check"></i> Pembersihan debu</li>
+                        <li><i class="fas fa-check"></i> Ganti thermal paste</li>
+                        <li><i class="fas fa-check"></i> Manajemen kabel</li>
                     </ul>
+                    <a href="https://wa.me/6282138004443?text=Halo%20SatuJalan,%20saya%20mau%20jadwal%20maintenance"
+                        class="btn-text">Hubungi kami untuk jadwal maintenance! <i class="fas fa-arrow-right"></i></a>
                 </div>
+
+                <!-- 3. Data Recovery -->
                 <div class="service-card glass-card">
                     <div class="card-icon"><i class="fas fa-save"></i></div>
                     <h3>Data Recovery</h3>
-                    <p>penyelamatan data penting dari harddisk atau storage rusak.</p>
+                    <p>Kehilangan data? Kami bantu pulihkan dari HDD/SSD rusak, file terhapus, atau backup system.</p>
+                    <!-- Kept card-list structure if user wants it, or just P as per brief. User provided P text but also bullet logic in others. 
+                     The input for 3) "Data Recovery" says: "pulihkan dari...backup system." then "Kontak kami..."
+                     I will format it similarly to others for consistency if it fits, but user text was one block.
+                     Ah, re-reading: "Layanan meliputi:" is NOT in Data Recovery text. But I'll make it clean. -->
                     <ul class="card-list">
                         <li><i class="fas fa-check"></i> HDD/SSD Corrupt</li>
                         <li><i class="fas fa-check"></i> File Terhapus</li>
                         <li><i class="fas fa-check"></i> Backup System</li>
                     </ul>
+                    <a href="https://wa.me/6282138004443?text=Halo%20SatuJalan,%20saya%20butuh%20data%20recovery"
+                        class="btn-text">Kontak kami untuk pemulihan data yang aman dan cepat! <i
+                            class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
@@ -377,24 +405,34 @@
                 <div class="pricing-card glass-card">
                     <div class="pricing-header">
                         <h3 class="pkg-name">Paket Basic</h3>
-                        <span class="pkg-sub">Website Landing Page</span>
+                        <span class="pkg-sub">Landing Page Cepat untuk Closing</span>
                         <div class="price-tag">
                             <span class="currency">Rp</span>
                             <span class="amount">700</span>
                             <span class="unit">rb</span>
                         </div>
+                        <p class="pkg-desc-mini" style="font-size: 0.8rem; color: var(--text-muted); margin-top: 5px;">
+                            (Mulai dari)</p>
+                        <p class="pkg-desc-mini"
+                            style="font-size: 0.8rem; color: #39ff14; margin-top: 5px; font-weight: 500;">Harga bisa
+                            menyesuaikan kompleksitas</p>
                     </div>
                     <ul class="pkg-features">
-                        <li><i class="fas fa-check-circle"></i> Website Statis (1-3 Halaman)</li>
-                        <li><i class="fas fa-check-circle"></i> Desain Template Profesional</li>
-                        <li><i class="fas fa-check-circle"></i> Form Kontak Sederhana (Email/WA)</li>
-                        <li><i class="fas fa-check-circle"></i> Mobile Friendly</li>
+                        <li><i class="fas fa-check-circle"></i> Landing page 1–3 section/halaman</li>
+                        <li><i class="fas fa-check-circle"></i> Fokus leads & closing</li>
+                        <li><i class="fas fa-check-circle"></i> Desain template profesional (Mobile-First)</li>
+                        <li><i class="fas fa-check-circle"></i> Form kontak + Tombol WA (CTA)</li>
+                        <li><i class="fas fa-check-circle"></i> Basic speed optimization (Anti Berat)</li>
                         <li><i class="fas fa-check-circle"></i> 1x Revisi Desain</li>
-                        <li><i class="fas fa-clock"></i> Estimasi: 3-5 Hari Kerja</li>
+                        <li><i class="fas fa-clock"></i> Estimasi: 3–5 Hari Kerja</li>
+                        <li style="margin-top: 10px; color: var(--accent-orange);"><i class="fas fa-gift"></i>
+                            <strong>Bonus:</strong> Setup CTA WA + Basic Tracking (Analytics)
+                        </li>
                     </ul>
-                    <p class="pkg-note">Cocok Untuk: Perusahaan kecil, portofolio pribadi, landing page kampanye.</p>
-                    <a href="https://wa.me/6282138004443?text=Halo%20SatuJalan,%20saya%20tertarik%20Paket%20Basic%20Web"
-                        class="btn btn-secondary full-width">Pilih Basic</a>
+                    <p class="pkg-note">Cocok untuk: Promosi, campaign, portofolio, produk/jasa tunggal.</p>
+                    <a href="https://wa.me/6282138004443?text=Halo%20SatuJalan,%20saya%20mau%20cek%20slot%20pengerjaan%20Paket%20Basic"
+                        class="btn btn-secondary full-width" style="font-size: 0.9rem;">Chat untuk cek slot
+                        pengerjaan</a>
                 </div>
 
                 <!-- Standard Package -->
@@ -402,52 +440,221 @@
                     <div class="popular-badge">BEST SELLER</div>
                     <div class="pricing-header">
                         <h3 class="pkg-name">Paket Standard</h3>
-                        <span class="pkg-sub">Website Profil dengan Database</span>
+                        <span class="pkg-sub">Company Profile + CMS</span>
                         <div class="price-tag">
                             <span class="currency">Rp</span>
                             <span class="amount">2.2</span>
                             <span class="unit">jt</span>
                         </div>
+                        <p class="pkg-desc-mini"
+                            style="font-size: 0.8rem; color: rgba(255,255,255,0.7); margin-top: 5px;">(Mulai dari)</p>
+                        <p class="pkg-desc-mini"
+                            style="font-size: 0.8rem; color: #39ff14; margin-top: 5px; font-weight: 500;">Termasuk
+                            konsultasi kebutuhan</p>
                     </div>
                     <ul class="pkg-features">
-                        <li><i class="fas fa-check-circle"></i> Website Dinamis (4-7 Halaman)</li>
-                        <li><i class="fas fa-check-circle"></i> Desain Semi-Kustom & Identitas Brand</li>
-                        <li><i class="fas fa-check-circle"></i> Database Pengelolaan Konten (CMS)</li>
-                        <li><i class="fas fa-check-circle"></i> Form Kontak + Tombol WA (CTA)</li>
-                        <li><i class="fas fa-check-circle"></i> Integrasi Google Maps & Basic SEO</li>
-                        <li><i class="fas fa-check-circle"></i> 2-3x Revisi Desain</li>
-                        <li><i class="fas fa-clock"></i> Estimasi: 7-10 Hari Kerja</li>
+                        <li><i class="fas fa-check-circle"></i> Website Dinamis (4–7 Halaman)</li>
+                        <li><i class="fas fa-check-circle"></i> Siap Branding & Terpercaya</li>
+                        <li><i class="fas fa-check-circle"></i> Desain Semi-Kustom + Identitas Brand</li>
+                        <li><i class="fas fa-check-circle"></i> CMS/Database: Update Sendiri Tanpa Coding</li>
+                        <li><i class="fas fa-check-circle"></i> Integrasi Maps + Basic SEO (Google Friendly)</li>
+                        <li><i class="fas fa-check-circle"></i> 2–3x Revisi Desain</li>
+                        <li><i class="fas fa-clock"></i> Estimasi: 7–10 Hari Kerja</li>
+                        <li style="margin-top: 10px; color: var(--accent-orange);"><i class="fas fa-gift"></i>
+                            <strong>Bonus:</strong> SSL + Basic Security + Training Admin
+                        </li>
                     </ul>
-                    <p class="pkg-note">Cocok Untuk: Website perusahaan, blog, portal berita, galeri online.</p>
-                    <a href="https://wa.me/6282138004443?text=Halo%20SatuJalan,%20saya%20tertarik%20Paket%20Standard%20Web"
-                        class="btn btn-accent full-width glow-orange">Pilih Standard</a>
+                    <p class="pkg-note">Cocok untuk: Bisnis lokal, company profile, blog, galeri.</p>
+                    <a href="https://wa.me/6282138004443?text=Halo%20SatuJalan,%20boleh%20minta%20contoh%20desain%20untuk%20Paket%20Standard?"
+                        class="btn btn-accent full-width glow-orange" style="font-size: 0.9rem;">Minta contoh desain &
+                        struktur</a>
                 </div>
 
                 <!-- Premium Package -->
                 <div class="pricing-card glass-card">
                     <div class="pricing-header">
                         <h3 class="pkg-name">Paket Premium</h3>
-                        <span class="pkg-sub">Aplikasi Mobile dengan Database</span>
+                        <span class="pkg-sub">Mobile App MVP (Android/iOS) + Database</span>
                         <div class="price-tag">
                             <span class="currency">Rp</span>
                             <span class="amount">5.5</span>
                             <span class="unit">jt</span>
                         </div>
+                        <p class="pkg-desc-mini" style="font-size: 0.8rem; color: var(--text-muted); margin-top: 5px;">
+                            (Mulai dari, Scope MVP)</p>
+                        <p class="pkg-desc-mini"
+                            style="font-size: 0.8rem; color: #39ff14; margin-top: 5px; font-weight: 500;">Rekomendasi
+                            struktur terbaik</p>
                     </div>
                     <ul class="pkg-features">
-                        <li><i class="fas fa-check-circle"></i> Aplikasi Mobile (Android/iOS*)</li>
-                        <li><i class="fas fa-check-circle"></i> Login, Registrasi & Data Pengguna</li>
-                        <li><i class="fas fa-check-circle"></i> Sistem Konten & Database (Firebase/MySQL)</li>
-                        <li><i class="fas fa-check-circle"></i> Desain Full Custom (Animasi Ringan)</li>
-                        <li><i class="fas fa-check-circle"></i> Integrasi API (Maps, Push Notif)</li>
-                        <li><i class="fas fa-check-circle"></i> 3+x Revisi Desain</li>
+                        <li><i class="fas fa-check-circle"></i> Aplikasi Mobile Android/iOS (Siap Pakai)</li>
+                        <li><i class="fas fa-check-circle"></i> Login/Registrasi + Manajemen User</li>
+                        <li><i class="fas fa-check-circle"></i> Database & Konten Real-time (Firebase/MySQL)</li>
+                        <li><i class="fas fa-check-circle"></i> UI Full Custom + Animasi Ringan</li>
+                        <li><i class="fas fa-check-circle"></i> Integrasi API Dasar (Maps/Notif)</li>
+                        <li><i class="fas fa-check-circle"></i> 3x+ Revisi Desain</li>
                         <li><i class="fas fa-shield-alt"></i> Support 1 Bulan (Bug Fix)</li>
-                        <li><i class="fas fa-clock"></i> Estimasi: 15-30 Hari Kerja</li>
+                        <li><i class="fas fa-clock"></i> Estimasi: 15–30 Hari Kerja</li>
+                        <li style="margin-top: 10px; color: var(--accent-orange);"><i class="fas fa-gift"></i>
+                            <strong>Bonus:</strong> Checklist Rilis + Rekomendasi Scale
+                        </li>
                     </ul>
-                    <p class="pkg-note">Cocok Untuk: E-commerce sederhana, manajemen pengguna, aplikasi CRM.</p>
-                    <a href="https://wa.me/6282138004443?text=Halo%20SatuJalan,%20saya%20tertarik%20Paket%20Premium%20App"
-                        class="btn btn-secondary full-width">Pilih Premium</a>
+                    <p class="pkg-note">Cocok untuk: MVP Startup, CRM sederhana, komunitas, booking.</p>
+                    <a href="https://wa.me/6282138004443?text=Halo%20SatuJalan,%20saya%20ingin%20konsultasi%20fitur%20MVP%20(Gratis)"
+                        class="btn btn-secondary full-width" style="font-size: 0.9rem;">Konsultasi fitur MVP
+                        (Gratis)</a>
                 </div>
+            </div>
+
+            <!-- Advanced Packages Toggle -->
+            <div class="advanced-toggle-container center" style="margin: 3rem 0;">
+                <button id="toggle-advanced-btn" class="btn btn-primary glow-effect"
+                    style="border-radius: 50px; padding: 1rem 2.5rem;">
+                    <i class="fas fa-chevron-down"></i> Lihat Paket Lanjutan
+                </button>
+            </div>
+
+            <!-- Advanced Packages Grid -->
+            <div id="advanced-pricing-grid" class="pricing-grid advanced-hidden"
+                style="display: none; opacity: 0; transition: all 0.5s ease;">
+
+                <!-- 1. Paket Advanced (Cyan) -->
+                <div class="pricing-card liquid-card theme-cyan">
+                    <div class="pricing-header">
+                        <h3 class="pkg-name">Paket Advanced</h3>
+                        <span class="pkg-sub">E-Commerce Smart Starter</span>
+                        <div class="price-tag">
+                            <span class="currency">Rp</span>
+                            <span class="amount">6.5</span>
+                            <span class="unit">jt</span>
+                        </div>
+                    </div>
+                    <ul class="pkg-features">
+                        <li><i class="fas fa-check-circle"></i> Website E-Commerce Modern (Mobile-First)</li>
+                        <li><i class="fas fa-check-circle"></i> 8–10 Halaman (Katalog, Cart, Checkout)</li>
+                        <li><i class="fas fa-check-circle"></i> Payment Gateway (Midtrans/Stripe)</li>
+                        <li><i class="fas fa-check-circle"></i> Manajemen Produk & Stok Dasar</li>
+                        <li><i class="fas fa-check-circle"></i> Manajemen Transaksi & Status Order</li>
+                        <li><i class="fas fa-check-circle"></i> Desain Kustom Premium</li>
+                        <li><i class="fas fa-check-circle"></i> SEO Basic + Optimasi Performa</li>
+                        <li><i class="fas fa-check-circle"></i> 3x Revisi Desain</li>
+                        <li><i class="fas fa-clock"></i> Estimasi: 15–20 Hari Kerja</li>
+                    </ul>
+                    <p class="pkg-note">Cocok Untuk: UMKM, toko online yang ingin scale-up profesional.</p>
+                    <a href="https://wa.me/6282138004443?text=Halo%20SatuJalan,%20saya%20tertarik%20Paket%20Advanced%20(E-Commerce)"
+                        class="btn btn-secondary full-width">Pilih Advanced</a>
+                </div>
+
+                <!-- 2. Paket Pro (Purple) -->
+                <div class="pricing-card liquid-card theme-purple">
+                    <div class="pricing-header">
+                        <h3 class="pkg-name">Paket Pro</h3>
+                        <span class="pkg-sub">CMS Pro Secure (Portal/Berita)</span>
+                        <div class="price-tag">
+                            <span class="currency">Rp</span>
+                            <span class="amount">8.5</span>
+                            <span class="unit">jt</span>
+                        </div>
+                    </div>
+                    <ul class="pkg-features">
+                        <li><i class="fas fa-check-circle"></i> CMS Lanjutan (Update Mudah Tanpa Coding)</li>
+                        <li><i class="fas fa-check-circle"></i> 10–15 Halaman (Berita, Kategori, Galeri)</li>
+                        <li><i class="fas fa-shield-alt"></i> Security: SSL, Firewall, Anti-Serangan</li>
+                        <li><i class="fas fa-check-circle"></i> Manajemen User & Role (Admin/Editor)</li>
+                        <li><i class="fas fa-check-circle"></i> Integrasi Pembayaran (Opsional)</li>
+                        <li><i class="fas fa-check-circle"></i> High Performance Cache & Compression</li>
+                        <li><i class="fas fa-check-circle"></i> 4–5x Revisi Desain</li>
+                        <li><i class="fas fa-clock"></i> Estimasi: 20–30 Hari Kerja</li>
+                    </ul>
+                    <p class="pkg-note">Cocok Untuk: Portal berita, komunitas, organisasi besar.</p>
+                    <a href="https://wa.me/6282138004443?text=Halo%20SatuJalan,%20saya%20tertarik%20Paket%20Pro%20(CMS%20Secure)"
+                        class="btn btn-secondary full-width">Pilih Pro</a>
+                </div>
+
+                <!-- 3. Paket Enterprise (Gold) -->
+                <div class="pricing-card liquid-card theme-gold" style="border-color: var(--secondary);">
+                    <div class="pricing-header">
+                        <h3 class="pkg-name">Paket Enterprise</h3>
+                        <span class="pkg-sub">Web App Database Real-Time</span>
+                        <div class="price-tag">
+                            <span class="currency">Rp</span>
+                            <span class="amount">15</span>
+                            <span class="unit">jt</span>
+                        </div>
+                    </div>
+                    <ul class="pkg-features">
+                        <li><i class="fas fa-database"></i> Web App Berbasi Database (Workflow)</li>
+                        <li><i class="fas fa-key"></i> Auth: OAuth/JWT + Proteksi Akses</li>
+                        <li><i class="fas fa-bolt"></i> Fitur Real-Time (Update Tanpa Refresh)</li>
+                        <li><i class="fas fa-check-circle"></i> Integrasi API Eksternal (Payment/Maps)</li>
+                        <li><i class="fas fa-check-circle"></i> Dashboard Admin Lengkap</li>
+                        <li><i class="fas fa-check-circle"></i> Optimasi Stabilitas Tinggi</li>
+                        <li><i class="fas fa-check-circle"></i> 5x+ Revisi Desain</li>
+                        <li><i class="fas fa-clock"></i> Estimasi: 30–45 Hari Kerja</li>
+                    </ul>
+                    <p class="pkg-note">Cocok Untuk: Sistem internal, CRM/ERP ringan, aplikasi operasional.</p>
+                    <a href="https://wa.me/6282138004443?text=Halo%20SatuJalan,%20saya%20tertarik%20Paket%20Enterprise"
+                        class="btn btn-accent full-width" style="background: var(--secondary);">Pilih Enterprise</a>
+                </div>
+
+                <!-- 4. Paket Premium Mobile (Emerald) -->
+                <div class="pricing-card liquid-card theme-emerald popular">
+                    <div class="popular-badge">MOBILE APP</div>
+                    <div class="pricing-header">
+                        <h3 class="pkg-name">Paket Premium App</h3>
+                        <span class="pkg-sub">Mobile Android/iOS Real-Time</span>
+                        <div class="price-tag">
+                            <span class="currency">Rp</span>
+                            <span class="amount">25</span>
+                            <span class="unit">jt</span>
+                        </div>
+                    </div>
+                    <ul class="pkg-features">
+                        <li><i class="fab fa-android"></i> Android & iOS (Native Feel UI)</li>
+                        <li><i class="fas fa-sync"></i> Database Sync Real-Time</li>
+                        <li><i class="fas fa-rocket"></i> Growth Features: Push Notif, GPS, Chat</li>
+                        <li><i class="fas fa-check-circle"></i> Desain Full Custom + Micro-Interaction</li>
+                        <li><i class="fas fa-server"></i> Backend Managed (Firebase/MySQL)</li>
+                        <li><i class="fas fa-check-circle"></i> 6x+ Revisi Desain</li>
+                        <li><i class="fas fa-headset"></i> Support 2 Bulan (Bug Fix)</li>
+                        <li><i class="fas fa-clock"></i> Estimasi: 45–60 Hari Kerja</li>
+                    </ul>
+                    <p class="pkg-note">Cocok Untuk: E-commerce mobile, booking system, startup.</p>
+                    <a href="https://wa.me/6282138004443?text=Halo%20SatuJalan,%20saya%20tertarik%20Paket%20Premium%20Mobile%20App"
+                        class="btn btn-accent full-width glow-orange">Pilih Premium App</a>
+                </div>
+
+                <!-- 5. Paket Ultra (Platinum - FULL WIDTH) -->
+                <div class="pricing-card liquid-card theme-platinum pkg-ultra-prominent">
+                    <div class="pricing-header">
+                        <h3 class="pkg-name">Paket Ultra — Enterprise Suite</h3>
+                        <span class="pkg-sub">AI + Integrasi Sistem + Governance</span>
+                        <div class="price-tag">
+                            <span class="currency">Rp</span>
+                            <span class="amount">40</span>
+                            <span class="unit">jt</span>
+                        </div>
+                        <p class="pkg-note" style="margin-top: 1rem;">Cocok Untuk: Perusahaan besar, butuh kontrol ketat
+                            & skalabilitas tinggi.</p>
+                        <a href="https://wa.me/6282138004443?text=Halo%20SatuJalan,%20saya%20tertarik%20Paket%20Ultra%20Enterprise"
+                            class="btn btn-primary full-width" style="margin-top: 1rem;">Hubungi untuk Konsultasi</a>
+                    </div>
+                    <div class="features-wrapper" style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+                        <ul class="pkg-features">
+                            <li><i class="fas fa-network-wired"></i> Sistem End-to-End (Web + Backend + Integrasi)</li>
+                            <li><i class="fas fa-chart-line"></i> Dashboard Eksekutif & Analitik Otomatis</li>
+                            <li><i class="fas fa-cogs"></i> Integrasi ERP/CRM (Odoo/Zoho/HubSpot)</li>
+                            <li><i class="fas fa-robot"></i> Integrasi AI Ready</li>
+                        </ul>
+                        <ul class="pkg-features">
+                            <li><i class="fas fa-user-shield"></i> Multi-Role RBAC & Approval Flow</li>
+                            <li><i class="fas fa-lock"></i> Keamanan Lanjut (Backup, Firewall, Audit Log)</li>
+                            <li><i class="fas fa-bell"></i> Notifikasi Multi-Channel (WA/Email/Push)</li>
+                            <li><i class="fas fa-headset"></i> Support 3 Bulan (Stabilisasi)</li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
 
             <!-- Notes & Education -->
@@ -573,6 +780,70 @@
         </div>
     </section>
 
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section">
+        <div class="container">
+            <div class="section-title center">
+                <h2>Apa Kata <span class="highlight">Pelanggan?</span></h2>
+                <p>Pengalaman nyata dari mereka yang sudah mempercayakan perangkatnya kepada kami.</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <!-- Review 1 -->
+                <div class="liquid-card testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"Laptop mati total kena air, dibawa ke SC resmi disuruh ganti mainboard mahal
+                        banget. Di SatuJalan diperbaiki cuma bayar seperempatnya, normal lagi sampai sekarang! Mantap!"
+                    </p>
+                    <div class="reviewer">
+                        <div class="avatar">AD</div>
+                        <div class="info">
+                            <h5>Andi Darmawan</h5>
+                            <span>Jakarta Selatan</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="liquid-card testimonial-card theme-cyan">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"Pesen website buat toko online saya, hasilnya rapi banget dan loadingnya
+                        cepet. Masnya juga enak diajak diskusi kalau mau nambah fitur. Recommended buat UMKM!"</p>
+                    <div class="reviewer">
+                        <div class="avatar" style="background: var(--cyan);">SC</div>
+                        <div class="info">
+                            <h5>Siska Citra</h5>
+                            <span>Depok (Owner KopiSenja)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="liquid-card testimonial-card theme-purple">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"Servis panggilan ke kantor buat install ulang 5 PC. Datangnya tepat waktu,
+                        kerjanya cepet, dan bergaransi. Nggak perlu repot bawa PC berat-berat keluar."</p>
+                    <div class="reviewer">
+                        <div class="avatar" style="background: var(--purple);">BS</div>
+                        <div class="info">
+                            <h5>Budi Santoso</h5>
+                            <span>Tangerang Selatan</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Coverage Area -->
     <section id="coverage" class="coverage">
         <div class="container">
@@ -595,7 +866,9 @@
                     </div>
                 </div>
                 <div class="coverage-map-visual">
-                    <i class="fas fa-map-marked-alt big-icon"></i>
+                    <a href="https://maps.app.goo.gl/QgV5vA5Xu6BPX3Zj7" target="_blank" style="text-decoration: none;">
+                        <i class="fas fa-map-marked-alt big-icon" style="transition: 0.3s;"></i>
+                    </a>
                 </div>
             </div>
         </div>
@@ -676,7 +949,9 @@
                 <h4>Kontak</h4>
                 <p><i class="fab fa-whatsapp"></i> 0821-3800-4443</p>
                 <p><i class="far fa-envelope"></i> admin@satujalan.com</p>
-                <p><i class="fas fa-map-marker-alt"></i> Jabodetabek Area</p>
+                <p style="align-items: flex-start;"><i class="fas fa-map-marker-alt" style="margin-top: 5px;"></i>
+                    <span>Jl. H. Nursad, Ciater, Kec. Serpong, Kota Tangerang Selatan, Banten 15310</span>
+                </p>
             </div>
         </div>
         <div class="footer-bottom center">
@@ -880,10 +1155,38 @@
         </div>
     </div>
 
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/6282138004443" class="float-wa" target="_blank" title="Chat WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+    <!-- Chat Widget Button -->
+    <!-- Chat Widget Button -->
+    <div class="chat-widget-container">
+        <!-- Chat Box (Hidden by default) -->
+        <div class="chat-box" id="chatBox">
+            <div class="chat-header">
+                <div class="chat-title">
+                    <img src="cs-avatar.png" alt="CS Avatar" class="chat-avatar-img">
+                    <div>
+                        <h4>Admin 24 Jam</h4>
+                        <span class="online-status">● Online</span>
+                    </div>
+                </div>
+                <button id="closeChat"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot-message">
+                    Halo! Ada yang bisa saya bantu terkait layanan SatuJalan?
+                </div>
+            </div>
+            <div class="chat-input-area">
+                <input type="text" id="chatInput" placeholder="Tulis pesan..." autocomplete="off">
+                <button id="sendMessage"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+
+        <!-- Float Button (Toggle) -->
+        <button id="toggleChat" class="float-chat">
+            <img src="cs-avatar.png" alt="CS Avatar" class="chat-avatar-icon">
+            <span>CS 24 Jam</span>
+        </button>
+    </div>
 
     <script src="script.js"></script>
 </body>

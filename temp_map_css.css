@@ -1,0 +1,45 @@
+/* --- MAP VISUAL PLACEHOLDER --- */
+.coverage-map-visual {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    /* Definitive height */
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0.2)),
+        repeating-linear-gradient(0deg, transparent, transparent 19px, rgba(255, 255, 255, 0.05) 20px),
+        repeating-linear-gradient(90deg, transparent, transparent 19px, rgba(255, 255, 255, 0.05) 20px);
+    background-size: cover, 20px 20px, 20px 20px;
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.coverage-map-visual:hover {
+    border-color: var(--primary);
+    box-shadow: 0 0 30px rgba(0, 242, 255, 0.2);
+}
+
+.coverage-map-visual a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+
+.coverage-map-visual .big-icon {
+    font-size: 5rem;
+    color: var(--primary);
+    filter: drop-shadow(0 0 10px rgba(0, 242, 255, 0.5));
+    transition: 0.3s;
+}
+
+.coverage-map-visual:hover .big-icon {
+    transform: scale(1.1);
+    color: white;
+}

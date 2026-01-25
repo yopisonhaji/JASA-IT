@@ -702,114 +702,49 @@ img {
     opacity: 0.5;
 }
 
-/* Coverage Area - Vertical Stack (Foolproof Minimalist) */
+/* Coverage Area */
 .coverage-wrapper {
     display: flex;
-    flex-direction: column;
-    background: #0f172a;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: 24px;
-    overflow: hidden;
-    position: relative;
-    box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.5);
+    align-items: center;
+    gap: 4rem;
+    background: linear-gradient(to right, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.6));
 }
 
 .coverage-text {
-    padding: 3rem 2rem 1rem 2rem;
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.coverage-text h2 {
-    font-size: 2.2rem;
-    margin-bottom: 0.5rem;
-    color: white;
-}
-
-.coverage-text p {
-    color: #94a3b8;
-    margin-bottom: 2rem;
+    flex: 1;
 }
 
 .area-tags {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.6rem;
+    gap: 0.8rem;
+    margin-top: 1.5rem;
     margin-bottom: 2rem;
 }
 
 .tag {
-    padding: 0.5rem 1.5rem;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 100px;
+    padding: 0.5rem 1.2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50px;
     font-size: 0.9rem;
-    color: #cbd5e1;
-    transition: 0.2s;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .pricing-info {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     gap: 1rem;
-    padding: 0.8rem 1.5rem;
+    padding: 1rem;
     background: rgba(0, 242, 255, 0.05);
-    border-radius: 50px;
-    border: 1px solid rgba(0, 242, 255, 0.1);
-    color: #cbd5e1;
-    margin: 0 auto 2rem auto;
-}
-
-.pricing-info i {
-    font-size: 1.2rem;
+    border-radius: var(--radius-sm);
     color: var(--primary);
+    font-weight: 500;
 }
 
-.pricing-info span {
-    font-size: 0.9rem;
+.big-icon {
+    font-size: 8rem;
+    color: rgba(255, 255, 255, 0.05);
 }
-
-/* Map Banner - Wide and Short */
-.coverage-map-visual {
-    width: 100%;
-    height: 160px;
-    /* Slim banner */
-    background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    position: relative;
-    overflow: hidden;
-}
-
-/* Grid Pattern for Map Background */
-.coverage-map-visual::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-    background-size: 30px 30px;
-    opacity: 0.5;
-}
-
-.coverage-map-visual .big-icon {
-    font-size: 3.5rem;
-    color: var(--primary);
-    filter: drop-shadow(0 0 15px rgba(0, 242, 255, 0.4));
-    z-index: 2;
-    transition: 0.3s;
-}
-
-.coverage-map-visual:hover .big-icon {
-    transform: translateY(-5px);
-    color: white;
-}
-
-/* Remove old big-icon rule if exists separately */
 
 /* CTA */
 .cta-section {
@@ -935,215 +870,31 @@ footer {
 }
 
 /* Floating WhatsApp */
-/* Floating Chat Bot */
-/* Chat Widget Container */
-.chat-widget-container {
+.float-wa {
     position: fixed;
     bottom: 30px;
+    left: 30px;
+    /* Requested LEFT or maybe any side, usually right but can be configured. Wait, user said "di layar walau di gulir". Standard is Right, but I'll make it notable. */
+    /* Wait, user request: "tombol chat langsung ke whataapp slalu ada di layar" */
     right: 30px;
-    z-index: 10000;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}
-
-/* Toggle Button */
-.float-chat {
-    background: linear-gradient(135deg, var(--primary), #2563eb);
-    color: #000;
-    padding: 12px 24px;
-    border-radius: 50px;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-weight: 700;
-    font-size: 1rem;
-    box-shadow: 0 5px 20px rgba(0, 242, 255, 0.4);
-    transition: 0.3s;
-    animation: pulseGlow 3s infinite;
-}
-
-.float-chat:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 242, 255, 0.6);
-}
-
-.float-chat i {
-    font-size: 1.4rem;
-}
-
-/* Chat Box */
-.chat-box {
-    width: 350px;
-    height: 450px;
-    background: #0f172a;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 16px;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-    overflow: hidden;
-    /* Hidden logic managed by JS */
-    opacity: 0;
-    transform: translateY(20px) scale(0.9);
-    pointer-events: none;
-    transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    transform-origin: bottom right;
-    position: absolute;
-    bottom: 70px;
-    /* Above button */
-    right: 0;
-}
-
-.chat-box.active {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-    pointer-events: all;
-}
-
-/* Header */
-.chat-header {
-    background: linear-gradient(to right, #0f172a, #1e293b);
-    padding: 1rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/* Avatar Images */
-.chat-avatar-img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: 2px solid var(--primary);
-    object-fit: cover;
-}
-
-.chat-avatar-icon {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-}
-
-.chat-title {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-/* Remove old icon bg */
-.chat-title i {
-    display: none;
-}
-
-
-.chat-title h4 {
+    /* Let's put it on the right for standard UX, or left if they specified? "di layar" means on screen. Right is standard thumb reach. */
+    width: 60px;
+    height: 60px;
+    background-color: #25d366;
     color: white;
-    font-size: 1rem;
-    margin: 0;
-}
-
-.online-status {
-    font-size: 0.75rem;
-    color: #4ade80;
-    /* Green */
-}
-
-#closeChat {
-    background: none;
-    border: none;
-    color: rgba(255, 255, 255, 0.5);
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: 0.2s;
-}
-
-#closeChat:hover {
-    color: white;
-}
-
-/* Messages Area */
-.chat-messages {
-    flex: 1;
-    padding: 1rem;
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    background: rgba(0, 0, 0, 0.2);
-}
-
-.message {
-    max-width: 80%;
-    padding: 10px 14px;
-    border-radius: 12px;
-    font-size: 0.9rem;
-    line-height: 1.4;
-    word-wrap: break-word;
-}
-
-.bot-message {
-    align-self: flex-start;
-    background: rgba(255, 255, 255, 0.1);
-    color: #e2e8f0;
-    border-bottom-left-radius: 2px;
-}
-
-.user-message {
-    align-self: flex-end;
-    background: var(--primary);
-    color: #000;
-    /* Dark text on bright primary */
-    border-bottom-right-radius: 2px;
-    font-weight: 500;
-}
-
-/* Input Area */
-.chat-input-area {
-    padding: 1rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    display: flex;
-    gap: 10px;
-    background: #0f172a;
-}
-
-.chat-input-area input {
-    flex: 1;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 10px;
-    border-radius: 20px;
-    color: white;
-    font-size: 0.9rem;
-    outline: none;
-}
-
-.chat-input-area input:focus {
-    border-color: var(--primary);
-}
-
-#sendMessage {
-    background: var(--primary);
-    border: none;
-    width: 40px;
-    height: 40px;
     border-radius: 50%;
-    color: #000;
-    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: 0.2s;
+    font-size: 30px;
+    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+    z-index: 9999;
+    transition: 0.3s;
 }
 
-#sendMessage:hover {
+.float-wa:hover {
     transform: scale(1.1);
+    background-color: #20bd5a;
 }
 
 /* Loader */
@@ -1258,77 +1009,17 @@ footer {
     font-size: 0.9rem;
 }
 
-
-/* Testimonials Section */
-.testimonials-section {
-    padding: 5rem 0;
-    position: relative;
-    background: radial-gradient(circle at top left, rgba(0, 242, 255, 0.05), transparent 40%);
-}
-
-.testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 3rem;
-}
-
-.testimonial-card {
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.testimonial-card .stars {
-    color: #ffd700;
-    margin-bottom: 1rem;
-    font-size: 0.9rem;
-}
-
-.review-text {
-    font-style: italic;
-    color: #cbd5e1;
-    line-height: 1.6;
-    margin-bottom: 2rem;
-}
-
-.reviewer {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.reviewer .avatar {
-    width: 45px;
-    height: 45px;
-    background: var(--primary);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 700;
-    color: #000;
-    font-size: 0.9rem;
-}
-
-.reviewer .info h5 {
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-sm);
     color: white;
-    font-size: 1rem;
-    margin-bottom: 2px;
-}
-
-.reviewer .info span {
-    color: #94a3b8;
-    font-size: 0.8rem;
-}
-
-background: rgba(255, 255, 255, 0.05);
-border: 1px solid rgba(255, 255, 255, 0.1);
-border-radius: var(--radius-sm);
-color: white;
-font-family: inherit;
-transition: 0.3s;
+    font-family: inherit;
+    transition: 0.3s;
 }
 
 .form-group input:focus,
@@ -1566,8 +1257,6 @@ transition: 0.3s;
         justify-content: center;
         flex-wrap: wrap;
     }
-
-    /* Mobile Global Adjustments handled in component queries */
 
     .footer-content {
         grid-template-columns: 1fr;
@@ -2162,261 +1851,3 @@ transition: 0.3s;
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-/* --- REFINED PREMIUM GLASS THEMES (Advanced Packages) --- */
-
-/* Base Premium Card - High Contrast */
-.liquid-card {
-    position: relative;
-    background: rgba(15, 23, 42, 0.85);
-    /* Darker, more solid base for readability */
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    /* Crisper border */
-    box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.5);
-    /* Deeper shadow */
-    border-radius: 20px;
-    overflow: hidden;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-/* Subtle Gradient Sheen */
-.liquid-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 150px;
-    /* Top shine only */
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, transparent 100%);
-    z-index: -1;
-    pointer-events: none;
-}
-
-.liquid-card:hover {
-    transform: translateY(-8px) scale(1.01);
-    box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.6);
-    border-color: rgba(255, 255, 255, 0.4);
-}
-
-/* Consistent Header Spacing */
-.liquid-card .pricing-header {
-    padding: 2.5rem 2rem 1.5rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, transparent 100%);
-}
-
-.liquid-card .pkg-name {
-    font-size: 1.8rem;
-    font-weight: 700;
-    letter-spacing: -0.5px;
-    margin-bottom: 0.5rem;
-}
-
-.liquid-card .pkg-features {
-    padding: 2rem;
-}
-
-/* --- THEME DEFINITIONS --- */
-
-/* Theme: Cyan (Advanced) */
-.theme-cyan {
-    border-top: 4px solid #00f2ff;
-}
-
-.theme-cyan .pkg-name {
-    color: #00f2ff;
-}
-
-.theme-cyan .price-tag .amount {
-    text-shadow: 0 0 20px rgba(0, 242, 255, 0.4);
-}
-
-.theme-cyan .pkg-features i {
-    color: #00f2ff;
-}
-
-.theme-cyan:hover {
-    box-shadow: 0 15px 40px rgba(0, 242, 255, 0.15);
-}
-
-/* Theme: Purple (Pro) */
-.theme-purple {
-    border-top: 4px solid #d946ef;
-}
-
-.theme-purple .pkg-name {
-    color: #d946ef;
-}
-
-.theme-purple .price-tag {
-    color: #f0abfc;
-}
-
-.theme-purple .price-tag .amount {
-    text-shadow: 0 0 20px rgba(217, 70, 239, 0.4);
-}
-
-.theme-purple .pkg-features i {
-    color: #d946ef;
-}
-
-.theme-purple:hover {
-    box-shadow: 0 15px 40px rgba(217, 70, 239, 0.15);
-}
-
-/* Theme: Gold (Enterprise) */
-.theme-gold {
-    border-top: 4px solid #fbbf24;
-}
-
-.theme-gold .pkg-name {
-    color: #fbbf24;
-}
-
-.theme-gold .price-tag {
-    color: #fde68a;
-}
-
-.theme-gold .price-tag .amount {
-    text-shadow: 0 0 20px rgba(251, 191, 36, 0.4);
-}
-
-.theme-gold .pkg-features i {
-    color: #fbbf24;
-}
-
-.theme-gold:hover {
-    box-shadow: 0 15px 40px rgba(251, 191, 36, 0.15);
-}
-
-/* Theme: Emerald (Premium App) */
-.theme-emerald {
-    border-top: 4px solid #34d399;
-}
-
-.theme-emerald .pkg-name {
-    color: #34d399;
-}
-
-.theme-emerald .price-tag {
-    color: #6ee7b7;
-}
-
-.theme-emerald .price-tag .amount {
-    text-shadow: 0 0 20px rgba(52, 211, 153, 0.4);
-}
-
-.theme-emerald .pkg-features i {
-    color: #34d399;
-}
-
-.theme-emerald:hover {
-    box-shadow: 0 15px 40px rgba(52, 211, 153, 0.15);
-}
-
-/* Theme: Platinum (Ultra) - HEROIC REDESIGN */
-.theme-platinum {
-    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    position: relative;
-    overflow: hidden;
-}
-
-/* Animated Platinum Border */
-.theme-platinum::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border-radius: 20px;
-    padding: 2px;
-    /* Border width */
-    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-    opacity: 0.5;
-    animation: borderRotate 4s linear infinite;
-    pointer-events: none;
-}
-
-@keyframes borderRotate {
-    0% {
-        filter: hue-rotate(0deg);
-    }
-
-    100% {
-        filter: hue-rotate(360deg);
-    }
-}
-
-.theme-platinum .pkg-name {
-    background: linear-gradient(to right, #ffffff, #94a3b8);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    /* Reset to standard size */
-    font-size: 1.8rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.theme-platinum .price-tag .amount {
-    /* Reset to standard size */
-    font-size: 3.5rem;
-    color: white;
-    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-}
-
-.pkg-ultra-prominent {
-    grid-column: auto;
-    /* Reset full width */
-    padding: 0;
-    /* Reset custom padding */
-    display: flex;
-    /* Flex column */
-    flex-direction: column;
-    gap: 0;
-}
-
-.pkg-ultra-prominent .pricing-header {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, transparent 100%);
-    border-right: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    display: block;
-    padding: 2.5rem 2rem 1.5rem;
-}
-
-.pkg-ultra-prominent .features-wrapper {
-    padding: 2rem;
-    display: block;
-}
-
-/* Responsive Ultra */
-/* Responsive Ultra - No longer needed as it follows grid */
-
-/* List Item Refining */
-.liquid-card .pkg-features li {
-    padding: 0.8rem 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    /* More subtle divider */
-    color: rgba(255, 255, 255, 0.9);
-    /* Brighter text */
-}
-
-.liquid-card .pkg-features li:last-child {
-    border-bottom: none;
-}
-
-.liquid-card .pkg-features i {
-    font-size: 1.1rem;
-    margin-right: 12px;
-}
-
-/* Map Visual - Refined */
-/* Old big icon rules removed */

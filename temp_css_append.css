@@ -1,0 +1,193 @@
+/* --- LIQUID GLASS THEMES (Advanced Packages) --- */
+
+/* Base Liquid Card */
+.liquid-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 24px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    z-index: 1;
+}
+
+.liquid-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, transparent 100%);
+    z-index: -1;
+}
+
+.liquid-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Theme: Cyan (Advanced) */
+.theme-cyan {
+    border-top: 4px solid #00f2ff;
+}
+
+.theme-cyan .pkg-name {
+    color: #00f2ff;
+}
+
+.theme-cyan .price-tag {
+    text-shadow: 0 0 20px rgba(0, 242, 255, 0.5);
+}
+
+.theme-cyan:hover {
+    box-shadow: 0 0 30px rgba(0, 242, 255, 0.2);
+}
+
+/* Theme: Purple (Pro) */
+.theme-purple {
+    border-top: 4px solid #bd00ff;
+    background: linear-gradient(145deg, rgba(189, 0, 255, 0.05) 0%, rgba(20, 20, 30, 0.6) 100%);
+}
+
+.theme-purple .pkg-name {
+    color: #bd00ff;
+}
+
+.theme-purple .price-tag {
+    color: #eebbff;
+    text-shadow: 0 0 20px rgba(189, 0, 255, 0.5);
+}
+
+.theme-purple:hover {
+    box-shadow: 0 0 30px rgba(189, 0, 255, 0.2);
+}
+
+/* Theme: Gold (Enterprise) */
+.theme-gold {
+    border-top: 4px solid #ffd700;
+    background: linear-gradient(145deg, rgba(255, 215, 0, 0.05) 0%, rgba(20, 20, 30, 0.6) 100%);
+}
+
+.theme-gold .pkg-name {
+    color: #ffd700;
+}
+
+.theme-gold .price-tag {
+    color: #fffacd;
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+}
+
+.theme-gold:hover {
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.2);
+}
+
+/* Theme: Emerald/Green (Premium App) */
+.theme-emerald {
+    border-top: 4px solid #00ff88;
+    background: linear-gradient(145deg, rgba(0, 255, 136, 0.05) 0%, rgba(20, 20, 30, 0.6) 100%);
+}
+
+.theme-emerald .pkg-name {
+    color: #00ff88;
+}
+
+.theme-emerald .price-tag {
+    color: #ccffee;
+    text-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+}
+
+.theme-emerald:hover {
+    box-shadow: 0 0 30px rgba(0, 255, 136, 0.2);
+}
+
+/* Theme: Platinum (Ultra) - HEROIC */
+.theme-platinum {
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.8));
+    position: relative;
+    overflow: hidden;
+}
+
+/* Animated Border Gradient for Platinum */
+.theme-platinum::after {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    z-index: -2;
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    background-size: 400%;
+    filter: blur(20px);
+    animation: glowing 20s linear infinite;
+    opacity: 0.1;
+    /* Subtle glow */
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.theme-platinum .pkg-name {
+    background: linear-gradient(to right, #ffffff, #a0a0a0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.5rem !important;
+    /* Larger Title */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.theme-platinum .price-tag .amount {
+    font-size: 4.5rem !important;
+    /* Massive Price */
+    color: white;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
+}
+
+.pkg-ultra-prominent {
+    grid-column: 1 / -1;
+    /* Full Width */
+    padding: 4rem !important;
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Split Header/Features */
+    align-items: center;
+    gap: 3rem;
+}
+
+@media (max-width: 768px) {
+    .pkg-ultra-prominent {
+        grid-template-columns: 1fr;
+        padding: 2rem !important;
+    }
+}
+
+/* Features Styling in Liquid Cards */
+.liquid-card .pkg-features li {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.liquid-card .pkg-features li:last-child {
+    border-bottom: none;
+}
+
+.liquid-card .pkg-features i {
+    font-size: 1rem;
+    margin-right: 10px;
+}

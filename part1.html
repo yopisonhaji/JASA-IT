@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SatuJalan - One Way, All Solutions</title>
+    <meta name="description" content="24/7 On-Site Electronic Repair & Software Development Service in Jabodetabek.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Loading Screen -->
+    <div class="loader-container" id="loader">
+        <div class="loader-logo">
+            <div class="spinner"></div>
+            <span>SATUJALAN</span>
+        </div>
+    </div>
+
+    <!-- Background Elements -->
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+    <div class="grid-overlay"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <img src="logo.jpg" alt="SatuJalan Logo" class="logo-img">
+                <span class="logo-text">SATU<span class="highlight">JALAN</span></span>
+            </a>
+
+            <button class="mobile-toggle" id="mobile-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#hardware" class="nav-link">Hardware</a></li>
+                <li class="nav-item"><a href="#software" class="nav-link">Software</a></li>
+                <li class="nav-item"><a href="#coverage" class="nav-link">Coverage</a></li>
+                <li class="nav-item"><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li class="nav-item"><a href="#web-pricing" class="nav-link">Web Services</a></li>
+                <li class="nav-item"><a
+                        href="https://wa.me/6282138004443?text=Hello%20Admin%0AName%20%3A%0AI%20would%20like%20to%20..."
+                        class="nav-btn-mobile">Contact Us</a></li>
+                <li class="nav-item">
+                    <!-- Link back to Indonesian version -->
+                    <a href="index.html" class="lang-btn" style="text-decoration: none;">🇮🇩 ID</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero-container">
+            <div class="hero-content" data-aos="fade-up">
+                <div class="badge-pill">🚀 24/7 Service Jabodetabek</div>
+                <h1 class="hero-title">One Way, <span class="gradient-text">All Solutions</span></h1>
+                <p class="hero-subtitle">
+                    <span id="subtitle-text">Reinstall Windows with <span class="highlight">Pay As You Wish</span>.
+                        Supported by comprehensive technical solutions
+                        from hardware to software, hassle-free—we come to your location.</span>
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="https://wa.me/6282138004443?text=Halo%20SatuJalan,%20I%20need%20hardware%20assistance"
+                        class="btn btn-primary glow-effect">
+                        <i class="fas fa-wrench"></i> <span>Hardware Repair</span>
+                    </a>
+                    <a href="https://wa.me/6282138004443?text=Halo%20SatuJalan,%20I%20am%20interested%20in%20software/web%20creation"
+                        class="btn btn-secondary">
+                        <i class="fas fa-code"></i> <span>Create Software</span>
+                    </a>
+                    <a href="#" class="btn btn-accent" id="btn-download">
+                        <i class="fas fa-download"></i> <span>Download Service</span>
+                    </a>
+                </div>
+
+                <div class="partner-badge glow-border">
+                    <span class="partner-text">Official Collaboration with</span>
+                    <div class="partner-logo-container">
+                        <i class="fas fa-leaf partner-logo" style="color: #81b441; font-size: 1.5rem;"></i>
+                        <span class="partner-brand">envato<span class="highlight-green">elements</span></span>
+                    </div>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-num">24/7</span>
+                        <span class="stat-label">Ready to Call</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-num">1 Hr</span>
+                        <span class="stat-label">ETA Arrival</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-num">4.9⭐</span>
+                        <span class="stat-label">Tech Rating</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual" data-aos="fade-left">
+                <!-- Abstract Futuristic Visual using CSS/SVG -->
+                <div class="tech-circle">
+                    <div class="circle-inner"></div>
+                    <div class="floating-icon icon-1"><i class="fas fa-laptop-code"></i></div>
+                    <div class="floating-icon icon-2"><i class="fas fa-microchip"></i></div>
+                    <div class="floating-icon icon-3"><i class="fas fa-mobile-alt"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand Marquee (Hardware) -->
+    <div class="logo-marquee marquee-brand">
+        <div class="marquee-content" id="brand-marquee">
+            <!-- Brand Logos via JS -->
+        </div>
+    </div>
+
+    <!-- Hardware Services -->
+    <section id="hardware" class="services">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-tag">ON-SITE SERVICE</span>
+                <h2 class="section-title"><span class="highlight-blue">Hardware</span> Solutions</h2>
+                <p class="section-desc">Our professional technicians come directly to your home or office.</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card glass-card">
+                    <div class="card-icon"><i class="fas fa-tools"></i></div>
+                    <h3>Repair & Service</h3>
+                    <p>Repair of broken or problematic PCs, Laptops, Printers.</p>
+                    <ul class="card-list">
+                        <li><i class="fas fa-check"></i> Dead / No Power</li>
+                        <li><i class="fas fa-check"></i> LCD/Battery Replacement</li>
+                        <li><i class="fas fa-check"></i> Keyboard Error</li>
+                    </ul>
+                </div>
+                <div class="service-card glass-card">
+                    <div class="card-icon"><i class="fas fa-broom"></i></div>
+                    <h3>Maintenance</h3>
+                    <p>Periodic maintenance to keep devices optimal and durable.</p>
+                    <ul class="card-list">
+                        <li><i class="fas fa-check"></i> Dust Cleaning</li>
+                        <li><i class="fas fa-check"></i> Thermal Paste Replacement</li>
+                        <li><i class="fas fa-check"></i> Cable Management</li>
+                    </ul>
+                </div>
+                <div class="service-card glass-card">
+                    <div class="card-icon"><i class="fas fa-save"></i></div>
+                    <h3>Data Recovery</h3>
+                    <p>Rescue important data from damaged hard disks or storage.</p>
+                    <ul class="card-list">
+                        <li><i class="fas fa-check"></i> Corrupt HDD/SSD</li>
+                        <li><i class="fas fa-check"></i> Deleted Files</li>
+                        <li><i class="fas fa-check"></i> System Backup</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Software Services -->
+    <section id="software" class="services section-dark">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-tag">DIGITAL SOLUTIONS</span>
+                <h2 class="section-title"><span class="highlight-purple">Software</span> Solutions</h2>
+                <p class="section-desc">Transform your business ideas into modern digital products.</p>
+            </div>
+
+            <!-- Code Marquee (Software) -->
+            <div class="logo-marquee marquee-code">
+                <div class="marquee-content" id="code-marquee">
+                    <!-- Code Logos via JS -->
+                </div>
+            </div>
+            <br><br>
+
+            <div class="services-row">
+                <div class="feature-box">
+                    <div class="feature-content">
+                        <h3>Web Development</h3>
+                        <p>Company profile websites, online stores, to custom information systems with premium design.
+                        </p>
+                    </div>
+                    <div class="feature-visual">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-content">
+                        <h3>Mobile Apps</h3>
+                        <p>Responsive and user-friendly Android & iOS applications for business needs.</p>
+                    </div>
+                    <div class="feature-visual">
+                        <i class="fas fa-mobile-screen"></i>
+                    </div>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-content">
+                        <h3>Design & Multimedia</h3>
+                        <p>UI/UX Design, Logo, Video Editing, and digital assets for branding.</p>
+                    </div>
+                    <div class="feature-visual">
+                        <i class="fas fa-pen-nib"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="services section-dark"
+        style="background: linear-gradient(to bottom, var(--bg-dark), #0f172a);">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-tag">OUR WORK</span>
+                <h2 class="section-title">Featured <span class="highlight-blue">Portfolio</span></h2>
+                <p class="section-desc">Real proof of our dedication in delivering high-quality digital solutions.</p>
+            </div>
+
+            <!-- Filters -->
+            <div class="portfolio-filter center">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Website</button>
+                <button class="filter-btn" data-filter="app">Mobile Apps</button>
+            </div>
+
+            <!-- Grid -->
+            <div class="portfolio-grid">
+                <!-- Data will be populated by JS or hardcoded here. Hardcoding for SEO/Visibility -->
+
+                <!-- Web Projects -->
+                <div class="portfolio-item" data-category="web">
+                    <img src="portofolio/web/web bilpay.png" alt="Web Bilpay">
+                    <div class="portfolio-overlay">
+                        <h4>Web Bilpay</h4>
+                        <p>Fintech / PPOB</p>
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="web">
+                    <img src="portofolio/web/web nahwupintar.png" alt="Web Nahwu Pintar">
+                    <div class="portfolio-overlay">
+                        <h4>Nahwu Pintar</h4>
+                        <p>E-Learning</p>
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="web">
+                    <img src="portofolio/web/web Peduli Pendidikan Umat (PPU).png" alt="Web PPU">
+                    <div class="portfolio-overlay">
+                        <h4>Yayasan PPU</h4>
+                        <p>Charity / NGO</p>
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="web">
+                    <img src="portofolio/web/web pgri.png" alt="Web PGRI">
+                    <div class="portfolio-overlay">
+                        <h4>Web PGRI</h4>
+                        <p>Organization</p>
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="web">
+                    <img src="portofolio/web/web Universitas Terbuka.png" alt="Web UT">
+                    <div class="portfolio-overlay">
+                        <h4>Universitas Terbuka</h4>
+                        <p>Educational Institution</p>
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+
+                <!-- App Projects -->
+                <div class="portfolio-item" data-category="app">
+                    <img src="portofolio/apps/Al-Qur'an Arti Perkata Offline.png" alt="App Quran">
+                    <div class="portfolio-overlay">
+                        <h4>Al-Qur'an Perkata</h4>
+                        <p>Religious App</p>
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                    <div class="app-badges">
+                        <img src="logo%20store/logo%20google%20play.png" alt="Google Play">
+                        <img src="logo%20store/logo%20ios%20store.png" alt="App Store">
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="app">
+                    <img src="portofolio/apps/Nahwu Shorof Pemula Lengkap.png" alt="App Nahwu">
+                    <div class="portfolio-overlay">
+                        <h4>Nahwu Shorof</h4>
+                        <p>Education App</p>
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                    <div class="app-badges">
+                        <img src="logo%20store/logo%20google%20play.png" alt="Google Play">
+                        <img src="logo%20store/logo%20ios%20store.png" alt="App Store">
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="app">
+                    <img src="portofolio/apps/PLN Mobile.png" alt="PLN Mobile">
+                    <div class="portfolio-overlay">
+                        <h4>PLN Mobile Clone</h4>
+                        <p>Utility App</p>
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                    <div class="app-badges">
+                        <img src="logo%20store/logo%20google%20play.png" alt="Google Play">
+                        <img src="logo%20store/logo%20ios%20store.png" alt="App Store">
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="app">
+                    <img src="portofolio/apps/Peduli Pendidikan Umat (PPU).png" alt="App PPU">
+                    <div class="portfolio-overlay">
+                        <h4>App PPU</h4>
+                        <p>Social App</p>
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                    <div class="app-badges">
+                        <img src="logo%20store/logo%20google%20play.png" alt="Google Play">
+                        <img src="logo%20store/logo%20ios%20store.png" alt="App Store">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Lightbox -->
+    <div id="portfolioModal" class="lightbox-modal">
+        <span class="close-lightbox">&times;</span>
+        <img class="lightbox-content" id="lightboxImg">
+        <div id="caption"></div>
+    </div>
+
+    <!-- Pricing Section -->
+    <section id="web-pricing" class="services">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-tag" data-lang="pricing-tag">DIGITAL INVESTMENT</span>
+                <h2 class="section-title" data-lang="pricing-title">Packages & Pricing <span
+                        class="highlight-orange">Web
+                        Services</span></h2>
+                <p class="section-desc">Choose a package that suits your business needs. Transparent, no hidden fees.
+                </p>
+            </div>
+
+            <div class="pricing-grid">
+                <!-- Basic Package -->
+                <div class="pricing-card glass-card">
+                    <div class="pricing-header">
+                        <h3 class="pkg-name">Basic Package</h3>
+                        <span class="pkg-sub">Fast Landing Page for Closing</span>
+                        <div class="price-tag">
+                            <span class="currency">Rp</span>
+                            <span class="amount">700</span>
+                            <span class="unit">k</span>
+                        </div>
+                        <p class="pkg-desc-mini" style="font-size: 0.8rem; color: var(--text-muted); margin-top: 5px;">
+                            (Starts from)</p>
+                        <p class="pkg-desc-mini"
+                            style="font-size: 0.8rem; color: #39ff14; margin-top: 5px; font-weight: 500;">Price adjusts
+                            to complexity</p>
+                    </div>
+                    <ul class="pkg-features">
+                        <li><i class="fas fa-check-circle"></i> Landing page 1–3 sections/page</li>
+                        <li><i class="fas fa-check-circle"></i> Focus on leads & closing</li>
+                        <li><i class="fas fa-check-circle"></i> Professional template design (Mobile-First)</li>
+                        <li><i class="fas fa-check-circle"></i> Contact form + WA Button (CTA) direct to chat</li>
+                        <li><i class="fas fa-check-circle"></i> Basic speed optimization (Lightweight)</li>
+                        <li><i class="fas fa-check-circle"></i> 1x Design Revision</li>
+                        <li><i class="fas fa-clock"></i> Est: 3–5 Working Days</li>
+                        <li style="margin-top: 10px; color: var(--accent-orange);"><i class="fas fa-gift"></i>
+                            <strong>Bonus:</strong> Setup CTA WA + Basic Tracking (Analytics)
+                        </li>
+                    </ul>
+                    <p class="pkg-note">Suitable for: Promotion, campaign, portfolio, single product/service.</p>
+                    <a href="https://wa.me/6282138004443?text=Hello%20SatuJalan,%20I%20want%20to%20check%20slot%20availability%20for%20Basic%20Package"
+                        class="btn btn-secondary full-width" style="font-size: 0.9rem;">Chat to check slot
+                        availability</a>
+                </div>
+
+                <!-- Standard Package -->
+                <div class="pricing-card glass-card popular">
+                    <div class="popular-badge">BEST SELLER</div>
+                    <div class="pricing-header">
+                        <h3 class="pkg-name">Standard Package</h3>
+                        <span class="pkg-sub">Company Profile + CMS</span>
+                        <div class="price-tag">
+                            <span class="currency">Rp</span>
+                            <span class="amount">2.2</span>
+                            <span class="unit">m</span>
+                        </div>
+                        <p class="pkg-desc-mini"
+                            style="font-size: 0.8rem; color: rgba(255,255,255,0.7); margin-top: 5px;">(Starts from)</p>
+                        <p class="pkg-desc-mini"
+                            style="font-size: 0.8rem; color: #39ff14; margin-top: 5px; font-weight: 500;">Includes needs
+                            consultation</p>
+                    </div>
+                    <ul class="pkg-features">
+                        <li><i class="fas fa-check-circle"></i> Dynamic Website (4–7 Pages)</li>
+                        <li><i class="fas fa-check-circle"></i> Branding Ready & Trustworthy</li>
+                        <li><i class="fas fa-check-circle"></i> Semi-Custom Design + Brand Identity</li>
+                        <li><i class="fas fa-check-circle"></i> CMS/Database: Self-update without coding</li>
+                        <li><i class="fas fa-check-circle"></i> Maps Integration + Basic SEO (Google Friendly)</li>
+                        <li><i class="fas fa-check-circle"></i> 2–3x Design Revisions</li>
+                        <li><i class="fas fa-clock"></i> Est: 7–10 Working Days</li>
+                        <li style="margin-top: 10px; color: var(--accent-orange);"><i class="fas fa-gift"></i>
+                            <strong>Bonus:</strong> SSL + Basic Security + Admin Training
+                        </li>
+                    </ul>
+                    <p class="pkg-note">Suitable for: Local business, company profile, blog, gallery.</p>
+                    <a href="https://wa.me/6282138004443?text=Hello%20SatuJalan,%20can%20I%20request%20design%20examples%20for%20Standard%20Package?"
+                        class="btn btn-accent full-width glow-orange" style="font-size: 0.9rem;">Request design examples
+                        & page structure</a>
+                </div>
+
+                <!-- Premium Package -->
+                <div class="pricing-card glass-card">
+                    <div class="pricing-header">
+                        <h3 class="pkg-name">Premium Package</h3>
+                        <span class="pkg-sub">Mobile App MVP (Android/iOS) + Database</span>
+                        <div class="price-tag">
+                            <span class="currency">Rp</span>
+                            <span class="amount">5.5</span>
+                            <span class="unit">m</span>
+                        </div>
+                        <p class="pkg-desc-mini" style="font-size: 0.8rem; color: var(--text-muted); margin-top: 5px;">
+                            (Starts from, MVP Scope)</p>
+                        <p class="pkg-desc-mini"
+                            style="font-size: 0.8rem; color: #39ff14; margin-top: 5px; font-weight: 500;">Best structure
+                            recommendation</p>
+                    </div>
+                    <ul class="pkg-features">
+                        <li><i class="fas fa-check-circle"></i> Mobile App Android/iOS (Ready to Use)</li>
+                        <li><i class="fas fa-check-circle"></i> Login/Registration + User Management</li>
+                        <li><i class="fas fa-check-circle"></i> Database & Content Real-time (Firebase/MySQL)</li>
+                        <li><i class="fas fa-check-circle"></i> UI Full Custom + Light Animations</li>
+                        <li><i class="fas fa-check-circle"></i> Basic API Integration (Maps/Notifications)</li>
+                        <li><i class="fas fa-check-circle"></i> 3x+ Design Revisions</li>
+                        <li><i class="fas fa-shield-alt"></i> 1 Month Support (Bug Fix)</li>
+                        <li><i class="fas fa-clock"></i> Est: 15–30 Working Days</li>
+                        <li style="margin-top: 10px; color: var(--accent-orange);"><i class="fas fa-gift"></i>
+                            <strong>Bonus:</strong> Release Checklist + Scale Recommendation
+                        </li>
+                    </ul>
+                    <p class="pkg-note">Suitable for: MVP Startup, simple CRM, community, booking.</p>
+                    <a href="https://wa.me/6282138004443?text=Hello%20SatuJalan,%20I%20want%20to%20consult%20MVP%20features%20(Free)"
+                        class="btn btn-secondary full-width" style="font-size: 0.9rem;">Consult MVP features (Free)
+                        before start</a>
+                </div>
+            </div>
+
+            <!-- Advanced Packages Toggle -->
+            <div class="advanced-toggle-container center" style="margin: 3rem 0;">
+                <button id="toggle-advanced-btn" class="btn btn-primary glow-effect"
+                    style="border-radius: 50px; padding: 1rem 2.5rem;">
+                    <i class="fas fa-chevron-down"></i> View Advanced Packages
+                </button>
+            </div>

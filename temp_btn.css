@@ -1,0 +1,17 @@
+/* Text Button Style */
+.btn-text {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 1rem;
+    color: var(--primary);
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.btn-text:hover {
+    color: white;
+    transform: translateX(5px);
+}
