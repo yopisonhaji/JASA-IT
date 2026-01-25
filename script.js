@@ -746,14 +746,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
         } catch (error) {
             console.error('Chat Error:', error);
-            updateMessage(loadingId, "Gagal terhubung ke AI. Pastikan script python berjalan.");
+            const errorMsg = `
+                <div style="display: flex; flex-direction: column; gap: 8px;">
+                    <span>⚠️ <b>Sistem AI Offline</b></span>
+                    <span style="font-size: 0.85rem; opacity: 0.8;">Maaf, server AI sedang tidak aktif. Hubungi admin langsung:</span>
+                    <div style="background: rgba(37, 211, 102, 0.1); border: 1px solid #25d366; padding: 8px; border-radius: 8px; margin-top: 5px;">
+                        <span style="display: block; font-weight: bold; color: #25d366; margin-bottom: 5px;"><i class="fab fa-whatsapp"></i> 0821-3800-4443</span>
+                        <a href="https://wa.me/6282138004443?text=Assalammualaikum%0ANama%20%3A%0ASaya%20mau%20bertanya%20perihal..." target="_blank" style="display: inline-block; background: #25d366; color: white; padding: 4px 10px; border-radius: 4px; text-decoration: none; font-size: 0.8rem;">Chat Sekarang</a>
+                    </div>
+                </div>
+            `;
+            updateMessage(loadingId, errorMsg);
         }
     }
 
     function addMessage(text, className, isLoading = false) {
         const div = document.createElement('div');
         div.classList.add('message', className);
-        div.textContent = text;
+        div.innerHTML = text; // Changed to innerHTML for formatting
         if (isLoading) div.id = 'msg-' + Date.now();
 
         chatMessages.appendChild(div);
@@ -764,7 +774,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateMessage(id, newText) {
         const msgDiv = document.getElementById(id);
         if (msgDiv) {
-            msgDiv.textContent = newText;
+            msgDiv.innerHTML = newText; // Changed to innerHTML for formatting
             chatMessages.scrollTop = chatMessages.scrollHeight;
         }
     }
