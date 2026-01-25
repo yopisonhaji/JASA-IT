@@ -1662,6 +1662,15 @@ footer {
     .logo-item {
         height: 35px;
     }
+
+    .testimonial-track {
+        width: 95%;
+    }
+
+    .review-card {
+        min-width: 85vw;
+        max-width: 85vw;
+    }
 }
 
 /* Pricing Section */
@@ -1902,7 +1911,10 @@ footer {
 .testimonial-track {
     display: flex;
     gap: 2rem;
-    width: 60%;
+    width: 100%;
+    /* Widened from 60% */
+    max-width: 1200px;
+    /* Constrain max width for large screens */
     /* Allow overflow to be handled by container usually, but here we want scroll */
     overflow-x: auto;
     scroll-behavior: auto;
@@ -1915,6 +1927,7 @@ footer {
     /* Firefox */
     -ms-overflow-style: none;
     /* IE 10+ */
+    margin: 0 auto;
 }
 
 .testimonial-track::-webkit-scrollbar {
@@ -1927,9 +1940,74 @@ footer {
 }
 
 .review-card {
-    min-width: 350px;
-    /* Fixed width for consistent marquee */
-    max-width: 350px;
+    min-width: 320px;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Added Styling for Review Card Internals */
+.review-header {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    column-gap: 15px;
+    row-gap: 5px;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.reviewer-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    grid-row: 1 / span 2;
+    align-self: center;
+}
+
+.reviewer-img i {
+    font-size: 1.5rem;
+    color: var(--primary);
+}
+
+.reviewer-info {
+    grid-column: 2;
+    align-self: end;
+}
+
+.reviewer-info h4 {
+    font-size: 1.1rem;
+    margin-bottom: 2px;
+    color: var(--text-main);
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.reviewer-info p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.review-header .rating {
+    grid-column: 2;
+    display: flex;
+    gap: 3px;
+    color: #ffd700;
+    font-size: 0.8rem;
+    align-self: start;
+}
+
+/* Override padding for narrow cards */
+.review-card.glass-card {
+    padding: 1.5rem;
 }
 
 /* Pause on hover */
