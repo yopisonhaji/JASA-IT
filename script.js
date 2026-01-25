@@ -549,7 +549,7 @@ Mohon diproses, terima kasih.`;
         'testimoni-desc': { id: 'Pengalaman nyata dari klien yang telah menggunakan jasa SatuJalan.', en: 'Real experiences from clients who have used SatuJalan services.' },
 
         'cov-title': { id: 'Area Layanan Kami', en: 'Our Service Area' },
-        'cov-desc': { id: 'Kami melayani panggilan ke seluruh wilayah <strong>JABODETABEK</strong> dengan perhitungan biaya transport yang transparan.', en: 'We serve calls throughout <strong>JABODETABEK</strong> with transparent transport cost calculation.' },
+        'cov-desc': { id: 'Area Layanan Pembuatan Web / Aplikasi Seluruh Indonesia.<br>Area Layanan Servis Elektronik Jabodetabek.', en: 'Web / Application Development Service Area: All of Indonesia.<br>Electronics Repair Service Area: Jabodetabek.' },
 
         'cta-title': { id: 'Butuh Bantuan Sekarang?', en: 'Need Help Now?' },
         'cta-desc': { id: 'Teknisi kami siap meluncur ke lokasi Anda.', en: 'Our technicians are ready to dispatch to your location.' },
